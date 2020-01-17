@@ -9,46 +9,147 @@
 </head>
 <body>
   <div class="container">
-    <h1>Programming Language Suggestor</h1>
-    <p>Add intro description here</p>
-    
+    <div class="jumbotron">
+      <h1>Programming Language Suggestor</h1>
+      <p>Add intro description here</p>
+    </div>
+  <div class="wrapper"> 
     <br>
             <!-- Do something with this span!!! -->
-    <p>Hello, <span>Reader!</span> Please choose your favorite food among the options <strong>below.</strong></p>
-    <form id="first">
+    <p>Hello, <span>Reader!</span> Please choose among the options <strong>below.</strong></p>
+    <br>
+
+    <form id="food1">
+      <!-- First question-->
+      <h4>What is your favorite food?</h4>
+      <label>
+        <input type="radio" name="question1" value="a1">Burgers and fries
+      </label>
+        <br>
+      <label>
+        <input type="radio" name="question1" value="a2">Ice Cream
+      </label>
+      <br>
+      <label>
+        <input type="radio" name="question1" value="a3">Pizza
+      </label>
+      <br>
+      <label>
+        <input type="radio" name="question1" value="a4">Tacos
+      </label>
+    </form>
+
+    <form id="activity2">
+      <!-- Second question -->
+      <h4>What is your favorite acivity?</h4>
+      <label>
+        <input type="radio" name="question2" value="a1">Gaming
+      </label>
+      <br>
+      <label>
+        <input type="radio" name="question2" value="a2">Sports
+      </label>
+      <br>
+      <label>
+        <input type="radio" name="question2" value="a3">Movie Watching
+      </label>
+      <br>
+      <label>
+        <input type="radio" name="question2" value="a4">Reading
+      </label>
+    </form>
+
+    <form id="language3">
+      <!-- Third question -->
+      <h4>Server-side, or User Interface?</h4>
+      <label>
+        <input type="radio" name="question3" value="a1">Python, Java, Ruby
+      </label>
+      <br>
+      <label>
+        <input type="radio" name="question3" value="a2">HTML, CSS, JavaScript
+      </label>
+    </form>
+    
+    <form id="coffee4">
+      <!-- Fourth question -->
+      <h4>What kind of coffee do you most enjoy?</h4>
+      <label>
+        <input type="radio" name="question4" value="a1">American Drip
+      </label>
+      <br>
+      <label>
+        <input type="radio" name="question4" value="a2">French Press
+      </label>
+      <br>
+      <label>
+        <input type="radio" name="question4" value="a3">Lates
+      </label>
+      <br>
+      <label>
+        <input type="radio" name="question4" value="a4">Iced Coffee
+      </label>
+    </form>
+
+    <form id="color">
+      <!-- Fifth question -->
+      <h4>What is your favorite color?</h4>
+      <label>
+        <input type="radio" name="question5" value="a3">Red
+      </label>
+      <br>
+      <label>
+        <input type="radio" name="question5" value="a4">Green
+      </label>
+      <br>
+      <label>
+        <input type="radio" name="question5" value="a3">Purple
+      </label>
+      <br>
+      <label>
+        <input type="radio" name="question5" value="a4">Orange
+      </label>
+    </form>
+
+    <button type="submit" id="submit" onclick="tabulateAnswers()">Click to Finish!</button>
+  </div>
+    
+    
+    
+    <!-- <form id="food">
       <div class="form-group">
         <select id="food">
-          <option value="1"></option>
-          <option value="2"></option>
-          <option value="3"></option>
-          <option value="4"></option>
+          <option value="1">Burger</option>
+          <option value="2">Pizza</option>
+          <option value="3">Salad</option>
+          <option value="4">Tacos</option>
         </select>
       </div>      
     </form>
 
     <p>Choose a favorite <strong>activity!</strong></p>
-    <form id="second">
+    <form id="activity">
       <div class="form-group">
-        <select id="food">
-          <option value="1"></option>
-          <option value="2"></option>
-          <option value="3"></option>
-          <option value="4"></option>
+        <select id="activity">
+          <option value="1">Gaming</option>
+          <option value="2">Sports</option>
+          <option value="3">Movie Watching</option>
+          <option value="4">Reading</option>
         </select>
       </div>
     </form>
 
     <p>Please choose a Programming language type that you would be most <strong>comfortable</strong> with.</p>
-    <form id="third">
+    <form id="radio-butons">
       <div class="radio">
-        <label for="radio-butons">
-          <input type="radio" name="programming language type" value="Back-end">Back-end
+        <label>
+          <input type="radio" name="language" value="Back-end">Back-end
         </label>
       </div>
 
       <div class="radio">
-        <label for="radio-buttons">
-          <input type="radio" name="programming language type" value="front-end">Front-end
+        <label>
+          <input type="radio" name="language" value="front-end">Front-end
         </label>
       </div>
     </form>
@@ -69,7 +170,7 @@
         <label for="hiring-date">If you <em>could</em> start in the field as soon as you'd like, what date would you choose?</label>
         <input id="date" class="form-control" type="date">
       </div>
-    </form>
+    </form> --> -->
   </div>
   
 </body>
