@@ -13,8 +13,8 @@
     <p>Add intro description here</p>
     
     <br>
-
-    <p>Hello, Reader! Please choose your favorite food among the options below.</p>
+            <!-- Do something with this span!!! -->
+    <p>Hello, <span>Reader!</span> Please choose your favorite food among the options <strong>below.</strong></p>
     <form id="first">
       <div class="form-group">
         <select id="food">
@@ -26,7 +26,7 @@
       </div>      
     </form>
 
-    <p>Choose a favorite activity!</p>
+    <p>Choose a favorite <strong>activity!</strong></p>
     <form id="second">
       <div class="form-group">
         <select id="food">
@@ -38,7 +38,7 @@
       </div>
     </form>
 
-    <p>Please choose a Programming language type that you would be most comfortable with.</p>
+    <p>Please choose a Programming language type that you would be most <strong>comfortable</strong> with.</p>
     <form id="third">
       <div class="radio">
         <label for="radio-butons">
@@ -53,17 +53,21 @@
       </div>
     </form>
 
+    <img src="img/buddy_the_elf.jpeg" alt="buddy the elf">
+
+    <p>Buddy the Elf, what's your <strong>favorite color?</strong></p>
     <form id="fourth">
       <div class="color">
-        <label for="color">Buddy the Elf, what's your favorite color?</label>
-        <input id="color" class="form-control" type="color">
+        <label>
+          <input id="color" class="form-control" type="color">
+        </label>
       </div>
     </form>
 
     <form id="fifth">
       <div class="form-group">
-        <label for="hiring-date">If you could start in the field as soon as you'd like, what date would you choose?</label>
-        <input id="date" class="form-control" type="text">
+        <label for="hiring-date">If you <em>could</em> start in the field as soon as you'd like, what date would you choose?</label>
+        <input id="date" class="form-control" type="date">
       </div>
     </form>
   </div>
