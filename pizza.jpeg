@@ -1,0 +1,1896 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"6b8b93db2d",applicationID:"401100790"};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n("handle"),a=n(4),f=n(5),c=n("ee").get("tracer"),u=n("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(n,e){s[e]=i(d+e,!0,"api")}),s.addPageAction=i(d+"addPageAction",!0),s.setCurrentRouteName=i(d+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),n,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit("fn-err",[arguments,this,n],t),n}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){"string"==typeof n&&(n=new Error(n)),o("err",[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){"first-paint"===n.name?a("timing",["fp",Math.floor(n.startTime)]):"first-contentful-paint"===n.name&&a("timing",["fcp",Math.floor(n.startTime)])})}function i(n){if(n instanceof c&&!s){var e,t=Math.round(n.timeStamp);e=t>1e12?Date.now()-t:f.now()-t,s=!0,a("timing",["fi",t,{type:n.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var o,a=n("handle"),f=n("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:["paint"]})}catch(u){}}if("addEventListener"in document){var s=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r="",o=0;for(r in n)i.call(n,r)&&(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i<0?0:i);++r<i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&&n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&&n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r<t.length;r++)t[r]===e&&t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||"feature",y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var f="nr@context",c=n("gos"),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o="nr@id",a=n("gos");e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(n&&n.licenseKey&&n.applicationID&&e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=l.createElement("script");t.src="https://"+n.agent,e.parentNode.insertBefore(t,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n("handle"),u=n(4),s=n("ee"),p=n(3),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1158.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m]("DOMContentLoaded",o,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",i),d[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=n(6)},{}],"wrap-function":[function(n,e,t){function r(n){return!(n&&n instanceof Function&&n.apply&&!n[a])}var i=n("ee"),o=n(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){d([u,"",[r,a,i],f])}s(e+"start",[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+"err",[r,a,p],f),p}finally{s(e+"end",[r,a,c],f)}}return r(n)?n:(e||(e=""),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&&(e[i]=n[i]);return e}function d(e){try{n.emit("internal-error",e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<link rel="canonical" href="https://www.kingarthurflour.com/recipes/pizza-crust-recipe" />
+<meta property="og:site_name" content="King Arthur Flour" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="description" content="This light-textured, flavorful pizza crust recipe is equally good prepared thick-and-chewy, or thin-and-crisp." />
+<meta name="twitter:site" content="@KingArthurFlour" />
+<meta property="og:url" content="https://www.kingarthurflour.com/recipes/pizza-crust-recipe" />
+<meta property="og:title" content="Pizza Crust" />
+<meta name="twitter:creator" content="@KingArthurFlour" />
+<link rel="image_src" href="https://www.kingarthurflour.com/sites/default/files/recipe_legacy/20-3-large.jpg" />
+<meta property="og:description" content="This light-textured, flavorful pizza crust recipe is equally good prepared thick-and-chewy, or thin-and-crisp." />
+<meta property="og:image" content="https://www.kingarthurflour.com/sites/default/files/recipe_legacy/20-3-large.jpg" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Recipe",
+            "name": "Pizza Crust",
+            "keywords": "Pizza, Dairy-free, Vegan",
+            "description": "What a treat — hot homemade pizza, with exactly the toppings you like. And this crust adapts to YOUR schedule: make the dough now, and serve fresh pizza up to 2 days later. Please read this recipe all the way through before starting. It gives you a lot of baking options, and you want to choose the one that best fits your schedule.",
+            "recipeYield": "1 or 2 standard round pizzas, or 1 large rectangular pizza, about 12 servings",
+            "prepTime": "PT20M",
+            "datePublished": "December 31, 2009 at 7:00pm",
+            "totalTime": "PT3H8M",
+            "cookTime": "PT30M",
+            "recipeIngredient": [
+                "2 teaspoons active dry yeast or instant yeast",
+                "7/8 to 1 1/8 cups (198g to 255g) lukewarm water*",
+                "2 tablespoons (25g) olive oil",
+                "3 cups (361g) King Arthur Unbleached All-Purpose Flour",
+                "1 1/4 teaspoons salt"
+            ],
+            "recipeInstructions": "If you\u0027re using active dry yeast, dissolve it, with a pinch of sugar, in 2 tablespoons of the lukewarm water. Let the yeast and water sit at room temperature for 15 minutes, until the mixture has bubbled and expanded. If you\u0027re using instant yeast, you can skip this step., Combine the dissolved yeast (or the instant yeast) with the remainder of the ingredients. Mix and knead everything together—by hand, mixer or bread machine set on the dough cycle—till you\u0027ve made a soft, smooth dough. If you\u0027re kneading in a stand mixer, it should take 4 to 5 minutes at second speed, and the dough should barely clean the sides of the bowl, perhaps sticking a bit at the bottom. Don\u0027t over-knead the dough; it should hold together, but can still look fairly rough on the surface., To make pizza up to 24 hours later, skip to step 5., To make pizza now: Place the dough in a lightly greased bowl, cover the bowl, and allow it to rise till it\u0027s very puffy. This will take about an hour using instant yeast, or 90 minutes using active dry. If it takes longer, that\u0027s OK; just give it some extra time., To make pizza later: Allow the dough to rise, covered, for 45 minutes at room temperature. Refrigerate the dough for 4 hours (or for up to 24 hours); it will rise slowly as it chills. This step allows you more schedule flexibility; it also develops the crust\u0027s flavor. About 2 to 3 hours before you want to serve pizza, remove the dough from the refrigerator., Decide what size, shape, and thickness of pizza you want to make. This recipe will make one of the following choices:\nTwo 1/2\u0022-thick 14\u0022 round pizzas (pictured);\nTwo 3/4\u0022-thick 12\u0022 round pizzas;\nOne 3/4\u0022 to 1\u0022-thick 13\u0022 x 18\u0022 rectangular (Sicilian-style) pizza (pictured);\nOne 1 1/2\u0022-thick 9\u0022 x 13\u0022 rectangular pizza;\nOne 1\u0022-thick 14\u0022 round pizza., Divide the dough in half, for two pizzas; or leave it whole for one pizza., If you\u0027re making a rectangular pizza, shape the dough into a rough oval. For a round pizza, shape it into a rough circle. In either case, don\u0027t pat it flat; just stretch it briefly into shape. Allow the dough to rest, covered with an overturned bowl or lightly greased plastic wrap, for 15 minutes., Use vegetable oil pan spray to lightly grease the pan(s) of your choice. Drizzle olive oil into the bottom of the pan(s). The pan spray keeps the pizza from sticking; the olive oil gives the crust great flavor and crunch., Place the dough in the prepared pan(s). Press it over the bottom of the pan, stretching it towards the edges. You\u0027ll probably get about two-thirds of the way there before the dough starts shrinking back; walk away for 15 minutes. Cover the dough while you\u0027re away, so it doesn\u0027t dry out., When you come back, you should be able to pat the dough closer to the corners of the pan. Repeat the rest and dough-stretch one more time, if necessary; your goal is to get the dough to fill the pan as fully as possible., Allow the dough to rise, covered, till it\u0027s noticeably puffy, about 90 minutes (if it hasn\u0027t been refrigerated); or 2 to 2 1/2 hours (if it\u0027s been refrigerated). Towards the end of the rising time, preheat the oven to 450°F., Bake the pizza on the lower oven rack till it looks and feels set on top, and is just beginning to brown around the edge of the crust, but is still pale on top. This will take about 8 minutes for thinner crust pizza; about 10 to 12 minutes for medium thickness; and 12 to 14 minutes for thick-crust pizza. If you\u0027re baking two pizzas, reverse them in the oven (top to bottom, bottom to top) midway through the baking period., To serve pizza immediately: Remove it from the oven, and arrange your toppings of choice on top. Return to the oven, and bake on the upper oven rack for an additional 10 to 15 minutes, until the crust is nicely browned, both top and bottom, and the cheese is melted. Check it midway through, and move it to the bottom rack if the top is browning too much, or the bottom not enough., To serve pizza up to 2 days later: Remove the untopped, partially baked crust from the oven, cool completely on a rack, wrap in plastic, and store at room temperature. When ready to serve, top and bake in a preheated 450°F oven, adding a couple of minutes to the baking times noted above. Your goal is a pizza whose crust is browned, and whose toppings are hot/melted., Remove the pizza from the oven, and transfer it from the pan to a rack to cool slightly before serving. For easiest serving, cut with a pair of scissors.",
+            "author": {
+                "@type": "Organization",
+                "name": "King Arthur Flour",
+                "url": "https://www.kingarthurflour.com/",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://www.kingarthurflour.com/themes/custom/kaf_nextgenweb/images/logo--full.svg"
+                }
+            },
+            "nutrition": {
+                "@type": "NutritionInformation",
+                "servingSize": "1/12 crust",
+                "calories": "130",
+                "carbohydrateContent": "22g",
+                "cholesterolContent": "0mg",
+                "fiberContent": "1g",
+                "proteinContent": "4g",
+                "sodiumContent": "240mg",
+                "sugarContent": "0g",
+                "fatContent": "2.5g",
+                "saturatedFatContent": "0g",
+                "transFatContent": "0g"
+            },
+            "image": {
+                "@type": "ImageObject",
+                "url": "https://www.kingarthurflour.com/sites/default/files/recipe_legacy/20-3-large.jpg"
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.60",
+                "ratingCount": "183"
+            }
+        }
+    ]
+}</script>
+<link rel="shortcut icon" href="/themes/custom/kaf_nextgenweb/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="revision" href="https://www.kingarthurflour.com/recipes/pizza-crust-recipe" />
+<script src="/sites/default/files/google_tag/drupal_gtm_container/google_tag.script.js?q46pss" defer></script>
+
+    <title>Pizza Crust | King Arthur Flour</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_Jvl_STiT8wdI9DfnCdGk446mZ6qAbwBq4B1QKLxEfU4.css?q46pss" />
+<link rel="stylesheet" media="all" href="https://use.typekit.net/qwi2npt.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_GK_MLH3o6_Sl2ErL9t3fD53hewrADDJs7sP8WWQ-Tv4.css?q46pss" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+  </head>
+  <body class="has-subnav path-node page-node-type-recipe">
+        <a href="#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    <noscript aria-hidden="true"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M867KWL" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    <div class="page">
+
+  <header class="header" role="banner">
+      <div class="region region-promo-bar">
+    <div id="block-kafpromobar" class="block block-kaf-promo-bar block-kaf-promo-bar-block">
+  
+    
+      <div class="kaf-promo-bar js-kaf-promo-bar"></div>
+
+  </div>
+
+  </div>
+
+    <div class="header__wrap">
+        <div class="region region-header">
+    
+<div id="block-kaf-nextgenweb-branding" class="block block-branding">
+            <a href="/" title="King Arthur Flour" rel="home" class="site-logo">King Arthur Flour</a>
+      </div>
+<div id="block-kafsubmenu" class="block block-kaf-submenu">
+  
+    
+      <ul class="mnav-l1" id="mobile-nav" role="menu" aria-labelledby="mnav-trigger" tabindex="-1">
+       <li class="mnav-l1--item mnav-item">
+      <a href="https://shop.kingarthurflour.com/shop-home/" class="mobile-subnav-l1">Shop</a>
+
+                  
+    </li>
+       <li class="mnav-l1--item mnav-item">
+      <a href="/recipes" class="mobile-subnav-l1">Recipes</a>
+
+                    <button class="mnav-more"><span class="visually-hidden">Expand Recipes</span></button>
+
+        <div class="mnav-l2--wrapper mnav-wrapper" aria-hidden="true">
+          <div class="mnav-header">
+            <button class="mnav-back"><span class="visually-hidden">Collapse Recipes</span></button>
+            <h3 class="mnav-l2--title">Recipes</h3>
+          </div>
+          <ul class="mnav-l2">
+                          <li class="mnav-l2--item mnav-item">
+                <span class="mobile-subnav-l2">Categories</span>
+
+                                                  <button class="mnav-more"><span class="visually-hidden">Expand Categories</span></button>
+                  <div class="mnav-l3--wrapper mnav-wrapper" aria-hidden="true">
+                    <div class="mnav-header">
+                      <button class="mnav-back"><span class="visually-hidden">Collapse Categories</span></button>
+                      <h4 class="mnav-l3--title">Categories</h4>
+                    </div>
+                    <ul class="mnav-l3">
+                                              <li class="mnav-l3--item mnav-item">
+                          <a href="/recipes/biscuits-shortcakes" class="mobile-subnav-l3">Biscuits &amp; Shortcakes</a>
+                        </li>
+                                              <li class="mnav-l3--item mnav-item">
+                          <a href="/recipes/bread" class="mobile-subnav-l3">Bread</a>
+                        </li>
+                                              <li class="mnav-l3--item mnav-item">
+                          <a href="/recipes/buns-rolls" class="mobile-subnav-l3">Buns &amp; Rolls</a>
+                        </li>
+                                              <li class="mnav-l3--item mnav-item">
+                          <a href="/recipes/cake" class="mobile-subnav-l3">Cake</a>
+                        </li>
+                                              <li class="mnav-l3--item mnav-item">
+                          <a href="/recipes/chocolates-candies" class="mobile-subnav-l3">Chocolates &amp; Candies</a>
+                        </li>
+                                              <li class="mnav-l3--item mnav-item">
+                          <a href="/recipes/coffeecake" class="mobile-subnav-l3">Coffeecake</a>
+                        </li>
+                                              <li class="mnav-l3--item mnav-item">
+                          <a href="/recipes/cookies-bars" class="mobile-subnav-l3">Cookies &amp; Bars</a>
+                        </li>
+                                              <li class="mnav-l3--item mnav-item">
+                          <a href="/recipes/crackers" class="mobile-subnav-l3">Crackers</a>
+                        </li>
+                                              <li class="mnav-l3--item mnav-item">
+                          <a href="/recipes/crisps-cobblers" class="mobile-subnav-l3">Crisps &amp; Cobblers</a>
+                        </li>
+                                              <li class="mnav-l3--item mnav-item">
+                          <a href="/recipes/doughnuts" class="mobile-subnav-l3">Doughnuts</a>
+                        </li>
+                                              <li class="mnav-l3--item mnav-item">
+                          <a href="/recipes/glazes-toppings" class="mobile-subnav-l3">Glazes &amp; Toppings</a>
+                        </li>
+                                              <li class="mnav-l3--item mnav-item">
+                          <a href="/recipes/ice-cream-sorbet" class="mobile-subnav-l3">Ice Cream &amp; Sorbet</a>
+                        </li>
+                                              <li class="mnav-l3--item mnav-item">
+                          <a href="/recipes/main-dish" class="mobile-subnav-l3">Main Dish</a>
+                        </li>
+                                              <li class="mnav-l3--item mnav-item">
+                          <a href="/recipes/miscellaneous" class="mobile-subnav-l3">Miscellaneous</a>
+                        </li>
+                                              <li class="mnav-l3--item mnav-item">
+                          <a href="/recipes/muffins-popovers" class="mobile-subnav-l3">Muffins &amp; Popovers</a>
+                        </li>
+                                              <li class="mnav-l3--item mnav-item">
+                          <a href="/recipes/pancakes-waffles" class="mobile-subnav-l3">Pancakes &amp; Waffles</a>
+                        </li>
+                                              <li class="mnav-l3--item mnav-item">
+                          <a href="/recipes/pastry" class="mobile-subnav-l3">Pastry</a>
+                        </li>
+                                              <li class="mnav-l3--item mnav-item">
+                          <a href="/recipes/pie" class="mobile-subnav-l3">Pie</a>
+                        </li>
+                                              <li class="mnav-l3--item mnav-item">
+                          <a href="/recipes/puddings-trifle" class="mobile-subnav-l3">Puddings &amp; Trifle</a>
+                        </li>
+                                              <li class="mnav-l3--item mnav-item">
+                          <a href="/recipes/scones" class="mobile-subnav-l3">Scones</a>
+                        </li>
+                                          </ul>
+                  </div>
+                                
+              </li>
+                          <li class="mnav-l2--item mnav-item">
+                <a href="/recipes/collections" class="mobile-subnav-l2">Collections</a>
+
+                                                  <button class="mnav-more"><span class="visually-hidden">Expand Collections</span></button>
+                  <div class="mnav-l3--wrapper mnav-wrapper" aria-hidden="true">
+                    <div class="mnav-header">
+                      <button class="mnav-back"><span class="visually-hidden">Collapse Collections</span></button>
+                      <h4 class="mnav-l3--title">Collections</h4>
+                    </div>
+                    <ul class="mnav-l3">
+                                              <li class="mnav-l3--item mnav-item">
+                          <a href="/recipes/collections/amazing-whole-grain-recipes" class="mobile-subnav-l3">Amazing Whole Grains</a>
+                        </li>
+                                              <li class="mnav-l3--item mnav-item">
+                          <a href="/recipes/collections/bake-to-share" class="mobile-subnav-l3">Bake to Share</a>
+                        </li>
+                                              <li class="mnav-l3--item mnav-item">
+                          <a href="/recipes/collections/best-chocolate-recipes" class="mobile-subnav-l3">Best Chocolate Recipes</a>
+                        </li>
+                                              <li class="mnav-l3--item mnav-item">
+                          <a href="/recipes/collections/classic-cookie-recipes" class="mobile-subnav-l3">Classic Cookie Recipes</a>
+                        </li>
+                                              <li class="mnav-l3--item mnav-item">
+                          <a href="/recipes/collections/easy-yeast-baking" class="mobile-subnav-l3">Easy Yeast Baking</a>
+                        </li>
+                                              <li class="mnav-l3--item mnav-item">
+                          <a href="/recipes/collections/holiday-classics" class="mobile-subnav-l3">Holiday Classics</a>
+                        </li>
+                                              <li class="mnav-l3--item mnav-item">
+                          <a href="/recipes/collections/last-minute-miracles" class="mobile-subnav-l3">Last Minute Miracles</a>
+                        </li>
+                                              <li class="mnav-l3--item mnav-item">
+                          <a href="/recipes/collections/pjs-favorites" class="mobile-subnav-l3">PJ’s Favorites</a>
+                        </li>
+                                              <li class="mnav-l3--item mnav-item">
+                          <a href="/recipes/collections/show-stoppers" class="mobile-subnav-l3">Show Stoppers</a>
+                        </li>
+                                              <li class="mnav-l3--item mnav-item">
+                          <a href="/recipes/collections/sourdough-discard-recipes" class="mobile-subnav-l3">Sourdough Discard Recipes</a>
+                        </li>
+                                              <li class="mnav-l3--item mnav-item">
+                          <span class="mobile-subnav-l3">—</span>
+                        </li>
+                                              <li class="mnav-l3--item mnav-item">
+                          <a href="/recipes/collections" class="mobile-subnav-l3">View All Recipe Collections</a>
+                        </li>
+                                          </ul>
+                  </div>
+                                
+              </li>
+                          <li class="mnav-l2--item mnav-item">
+                <span class="mobile-subnav-l2">Resources</span>
+
+                                                  <button class="mnav-more"><span class="visually-hidden">Expand Resources</span></button>
+                  <div class="mnav-l3--wrapper mnav-wrapper" aria-hidden="true">
+                    <div class="mnav-header">
+                      <button class="mnav-back"><span class="visually-hidden">Collapse Resources</span></button>
+                      <h4 class="mnav-l3--title">Resources</h4>
+                    </div>
+                    <ul class="mnav-l3">
+                                              <li class="mnav-l3--item mnav-item">
+                          <a href="/recipebox" class="mobile-subnav-l3">Recipe Box</a>
+                        </li>
+                                              <li class="mnav-l3--item mnav-item">
+                          <a href="/bakers-hotline" class="mobile-subnav-l3">Bakers Hotline</a>
+                        </li>
+                                              <li class="mnav-l3--item mnav-item">
+                          <a href="/learn/ingredient-weight-chart" class="mobile-subnav-l3">Ingredient Weight Chart</a>
+                        </li>
+                                              <li class="mnav-l3--item mnav-item">
+                          <a href="/videos/baking-skills/how-to-measure-flour" class="mobile-subnav-l3">How to Measure Flour</a>
+                        </li>
+                                              <li class="mnav-l3--item mnav-item">
+                          <a href="/recipes/resources/recipe-success-guide" class="mobile-subnav-l3">Recipe Success Guide</a>
+                        </li>
+                                          </ul>
+                  </div>
+                                
+              </li>
+                      </ul>
+        </div>
+            
+    </li>
+       <li class="mnav-l1--item mnav-item">
+      <a href="/learn" class="mobile-subnav-l1">Learn</a>
+
+                    <button class="mnav-more"><span class="visually-hidden">Expand Learn</span></button>
+
+        <div class="mnav-l2--wrapper mnav-wrapper" aria-hidden="true">
+          <div class="mnav-header">
+            <button class="mnav-back"><span class="visually-hidden">Collapse Learn</span></button>
+            <h3 class="mnav-l2--title">Learn</h3>
+          </div>
+          <ul class="mnav-l2">
+                          <li class="mnav-l2--item mnav-item">
+                <a href="/learn/guides" class="mobile-subnav-l2">Baking Guides</a>
+
+                                                  <button class="mnav-more"><span class="visually-hidden">Expand Baking Guides</span></button>
+                  <div class="mnav-l3--wrapper mnav-wrapper" aria-hidden="true">
+                    <div class="mnav-header">
+                      <button class="mnav-back"><span class="visually-hidden">Collapse Baking Guides</span></button>
+                      <h4 class="mnav-l3--title">Baking Guides</h4>
+                    </div>
+                    <ul class="mnav-l3">
+                                              <li class="mnav-l3--item mnav-item">
+                          <a href="/guides/pie" class="mobile-subnav-l3">Pie Baking</a>
+                        </li>
+                                              <li class="mnav-l3--item mnav-item">
+                          <a href="/learn/guides/sourdough" class="mobile-subnav-l3">Sourdough Baking</a>
+                        </li>
+                                              <li class="mnav-l3--item mnav-item">
+                          <a href="/learn/guides/scone-baking" class="mobile-subnav-l3">Scone Baking</a>
+                        </li>
+                                              <li class="mnav-l3--item mnav-item">
+                          <a href="/learn/guides/gluten-free" class="mobile-subnav-l3">Gluten-Free Baking</a>
+                        </li>
+                                              <li class="mnav-l3--item mnav-item">
+                          <a href="/guides/cake" class="mobile-subnav-l3">Cake &amp; Cupcake Baking</a>
+                        </li>
+                                              <li class="mnav-l3--item mnav-item">
+                          <span class="mobile-subnav-l3">—</span>
+                        </li>
+                                              <li class="mnav-l3--item mnav-item">
+                          <a href="/learn/guides" class="mobile-subnav-l3">View All Baking Guides</a>
+                        </li>
+                                          </ul>
+                  </div>
+                                
+              </li>
+                          <li class="mnav-l2--item mnav-item">
+                <a href="/videos" class="mobile-subnav-l2">Videos</a>
+
+                                                
+              </li>
+                          <li class="mnav-l2--item mnav-item">
+                <a href="/baking-school" class="mobile-subnav-l2">Baking School</a>
+
+                                                
+              </li>
+                          <li class="mnav-l2--item mnav-item">
+                <span class="mobile-subnav-l2">Resources</span>
+
+                                                  <button class="mnav-more"><span class="visually-hidden">Expand Resources</span></button>
+                  <div class="mnav-l3--wrapper mnav-wrapper" aria-hidden="true">
+                    <div class="mnav-header">
+                      <button class="mnav-back"><span class="visually-hidden">Collapse Resources</span></button>
+                      <h4 class="mnav-l3--title">Resources</h4>
+                    </div>
+                    <ul class="mnav-l3">
+                                              <li class="mnav-l3--item mnav-item">
+                          <a href="/learn/resources/tools-and-pans" class="mobile-subnav-l3">Tools and Pans</a>
+                        </li>
+                                              <li class="mnav-l3--item mnav-item">
+                          <a href="/learn/resources/baking-tips-techniques" class="mobile-subnav-l3">Baking Tips and Techniques</a>
+                        </li>
+                                              <li class="mnav-l3--item mnav-item">
+                          <a href="/learn/resources/yeast" class="mobile-subnav-l3">All About Yeast</a>
+                        </li>
+                                              <li class="mnav-l3--item mnav-item">
+                          <a href="/learn/resources/high-altitude-baking" class="mobile-subnav-l3">High-Altitude Baking</a>
+                        </li>
+                                              <li class="mnav-l3--item mnav-item">
+                          <a href="/learn/ingredient-weight-chart" class="mobile-subnav-l3">Ingredient Weight Chart</a>
+                        </li>
+                                          </ul>
+                  </div>
+                                
+              </li>
+                      </ul>
+        </div>
+            
+    </li>
+       <li class="mnav-l1--item mnav-item">
+      <a href="/about" class="mobile-subnav-l1">About</a>
+
+                    <button class="mnav-more"><span class="visually-hidden">Expand About</span></button>
+
+        <div class="mnav-l2--wrapper mnav-wrapper" aria-hidden="true">
+          <div class="mnav-header">
+            <button class="mnav-back"><span class="visually-hidden">Collapse About</span></button>
+            <h3 class="mnav-l2--title">About</h3>
+          </div>
+          <ul class="mnav-l2">
+                          <li class="mnav-l2--item mnav-item">
+                <a href="/about/mission-impact" class="mobile-subnav-l2">Mission &amp; Impact</a>
+
+                                                
+              </li>
+                          <li class="mnav-l2--item mnav-item">
+                <a href="/about/our-products" class="mobile-subnav-l2">Our Products</a>
+
+                                                
+              </li>
+                          <li class="mnav-l2--item mnav-item">
+                <a href="/visit" class="mobile-subnav-l2">Visit Us</a>
+
+                                                
+              </li>
+                          <li class="mnav-l2--item mnav-item">
+                <a href="/about/bake-for-good-kids" class="mobile-subnav-l2">Bake for Good Kids</a>
+
+                                                
+              </li>
+                          <li class="mnav-l2--item mnav-item">
+                <a href="/about/history" class="mobile-subnav-l2">Our History</a>
+
+                                                
+              </li>
+                      </ul>
+        </div>
+            
+    </li>
+       <li class="mnav-l1--item mnav-item">
+      <a href="/blog" class="mobile-subnav-l1">Blog</a>
+
+                    <button class="mnav-more"><span class="visually-hidden">Expand Blog</span></button>
+
+        <div class="mnav-l2--wrapper mnav-wrapper" aria-hidden="true">
+          <div class="mnav-header">
+            <button class="mnav-back"><span class="visually-hidden">Collapse Blog</span></button>
+            <h3 class="mnav-l2--title">Blog</h3>
+          </div>
+          <ul class="mnav-l2">
+                          <li class="mnav-l2--item mnav-item">
+                <a href="/blog-category/tips-techniques" class="mobile-subnav-l2">Tips + Techniques</a>
+
+                                                
+              </li>
+                          <li class="mnav-l2--item mnav-item">
+                <a href="/blog-category/recipe" class="mobile-subnav-l2">Recipes</a>
+
+                                                
+              </li>
+                          <li class="mnav-l2--item mnav-item">
+                <a href="/blog-category/story" class="mobile-subnav-l2">Stories</a>
+
+                                                
+              </li>
+                      </ul>
+        </div>
+            
+    </li>
+       <li class="mnav-l1--item mnav-item">
+      <a href="/pro" class="mobile-subnav-l1">Bakery Flour Sales</a>
+
+                    <button class="mnav-more"><span class="visually-hidden">Expand Bakery Flour Sales</span></button>
+
+        <div class="mnav-l2--wrapper mnav-wrapper" aria-hidden="true">
+          <div class="mnav-header">
+            <button class="mnav-back"><span class="visually-hidden">Collapse Bakery Flour Sales</span></button>
+            <h3 class="mnav-l2--title">Bakery Flour Sales</h3>
+          </div>
+          <ul class="mnav-l2">
+                          <li class="mnav-l2--item mnav-item">
+                <a href="/pro/products" class="mobile-subnav-l2">Products</a>
+
+                                                
+              </li>
+                          <li class="mnav-l2--item mnav-item">
+                <a href="/pro/team" class="mobile-subnav-l2">Our Team</a>
+
+                                                
+              </li>
+                          <li class="mnav-l2--item mnav-item">
+                <a href="/pro/distributor" class="mobile-subnav-l2">Distributors</a>
+
+                                                
+              </li>
+                          <li class="mnav-l2--item mnav-item">
+                <a href="/pro/formulas" class="mobile-subnav-l2">Formulas</a>
+
+                                                
+              </li>
+                          <li class="mnav-l2--item mnav-item">
+                <a href="/pro/reference" class="mobile-subnav-l2">Reference</a>
+
+                                                  <button class="mnav-more"><span class="visually-hidden">Expand Reference</span></button>
+                  <div class="mnav-l3--wrapper mnav-wrapper" aria-hidden="true">
+                    <div class="mnav-header">
+                      <button class="mnav-back"><span class="visually-hidden">Collapse Reference</span></button>
+                      <h4 class="mnav-l3--title">Reference</h4>
+                    </div>
+                    <ul class="mnav-l3">
+                                              <li class="mnav-l3--item mnav-item">
+                          <a href="/pro/bakers-percentage" class="mobile-subnav-l3">Baker&#039;s Percentage</a>
+                        </li>
+                                              <li class="mnav-l3--item mnav-item">
+                          <a href="/pro/batch-costing" class="mobile-subnav-l3">Batch Costing</a>
+                        </li>
+                                              <li class="mnav-l3--item mnav-item">
+                          <a href="/pro/reference/bromate" class="mobile-subnav-l3">Bromate</a>
+                        </li>
+                                              <li class="mnav-l3--item mnav-item">
+                          <a href="/pro/reference/conversion" class="mobile-subnav-l3">Common conversions</a>
+                        </li>
+                                              <li class="mnav-l3--item mnav-item">
+                          <a href="/pro/reference/dough-temperature" class="mobile-subnav-l3">Dough Temperatures</a>
+                        </li>
+                                              <li class="mnav-l3--item mnav-item">
+                          <a href="/pro/reference/preferment" class="mobile-subnav-l3">Preferments</a>
+                        </li>
+                                              <li class="mnav-l3--item mnav-item">
+                          <a href="/pro/reference/salt" class="mobile-subnav-l3">Salt</a>
+                        </li>
+                                              <li class="mnav-l3--item mnav-item">
+                          <a href="/pro/reference/water" class="mobile-subnav-l3">Water</a>
+                        </li>
+                                              <li class="mnav-l3--item mnav-item">
+                          <a href="/pro/reference/yeast" class="mobile-subnav-l3">Yeast</a>
+                        </li>
+                                              <li class="mnav-l3--item mnav-item">
+                          <a href="/pro/reference/videos" class="mobile-subnav-l3">Video Tips for Professionals</a>
+                        </li>
+                                              <li class="mnav-l3--item mnav-item">
+                          <a href="/baking-school/calendar" class="mobile-subnav-l3">Professional Classes</a>
+                        </li>
+                                          </ul>
+                  </div>
+                                
+              </li>
+                          <li class="mnav-l2--item mnav-item">
+                <a href="/pro/contact" class="mobile-subnav-l2">Contact</a>
+
+                                                
+              </li>
+                      </ul>
+        </div>
+            
+    </li>
+  </ul>
+
+  </div>
+
+  </div>
+
+        <div class="region region-primary-menu">
+    <div id="block-kafmegamenu" class="block block-">
+  
+    
+      
+<ul class="menu menu-level-0">
+      
+    <li class="menu-item">
+              <a href="https://shop.kingarthurflour.com/shop-home/">Shop</a>
+      
+                    
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-0 menu-type-default">
+        
+  </div>
+          </li>
+      
+    <li class="menu-item menu-item--active-trail">
+              <a href="/recipes" class="is-active" data-drupal-link-system-path="node/116">Recipes</a>
+      
+                    
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-0 menu-type-default">
+        
+  </div>
+          </li>
+      
+    <li class="menu-item">
+              <a href="/learn" data-drupal-link-system-path="node/156">Learn</a>
+      
+                    
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-0 menu-type-default">
+        
+  </div>
+          </li>
+      
+    <li class="menu-item">
+              <a href="/about" data-drupal-link-system-path="node/27601">About</a>
+      
+                    
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-0 menu-type-default">
+        
+  </div>
+          </li>
+      
+    <li class="menu-item">
+              <a href="/blog" data-drupal-link-system-path="node/161">Blog</a>
+      
+                    
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-0 menu-type-default">
+        
+  </div>
+          </li>
+  </ul>
+
+  </div>
+
+  </div>
+
+        <div class="menu--utility region region-secondary-menu">
+
+    <div class="search">
+      <i class="search__show"></i>
+      <label for="search-bar" class="search__bar" aria-label="Search">
+        <input name="search-bar" placeholder="Search" />
+      </label>
+      <button class="search__hide"><span class="visually-hidden">Hide Search</span></button>
+      <div class="autocomplete"></div>
+    </div>
+
+    <nav class="user-nav">
+     <nav role="navigation" aria-labelledby="block-kaf-nextgenweb-secondarynavigation-menu" id="block-kaf-nextgenweb-secondarynavigation">
+            
+  <h2 class="visually-hidden" id="block-kaf-nextgenweb-secondarynavigation-menu">Secondary navigation</h2>
+  
+
+        
+<ul class="menu menu-level-0">
+  
+  <li class="user__item user__item-account menu-item menu-item--expanded">
+    <a href="https://shop.kingarthurflour.com/signin">Sign in</a>
+
+              
+
+<div class="menu_link_content menu-link-contentsecondary view-mode-default menu-dropdown menu-dropdown-0 menu-type-default">
+        
+<ul class="menu menu-level-1">
+  
+  <li class="user__item menu-item">
+    <a href="https://shop.kingarthurflour.com/AcctDashboard">Dashboard</a>
+
+              
+
+<div class="menu_link_content menu-link-contentsecondary view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+        
+  </div>
+      </li>
+  
+  <li class="user__item menu-item">
+    <a href="https://shop.kingarthurflour.com/OrderHistory">Orders</a>
+
+              
+
+<div class="menu_link_content menu-link-contentsecondary view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+        
+  </div>
+      </li>
+  
+  <li class="user__item menu-item">
+    <a href="https://shop.kingarthurflour.com/WishListDisplay">Wish List</a>
+
+              
+
+<div class="menu_link_content menu-link-contentsecondary view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+        
+  </div>
+      </li>
+  
+  <li class="user__item menu-item">
+    <a href="/recipebox" data-drupal-link-system-path="recipebox">Recipe Box</a>
+
+              
+
+<div class="menu_link_content menu-link-contentsecondary view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+        
+  </div>
+      </li>
+  
+  <li class="user__item menu-item">
+    <a href="https://shop.kingarthurflour.com/email/preferences.html">Email preferences</a>
+
+              
+
+<div class="menu_link_content menu-link-contentsecondary view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+        
+  </div>
+      </li>
+  
+  <li class="user__item user__item-separator user__item-chevron menu-item">
+    <a href="https://classes.kingarthurflour.com/Login.aspx">Baking School login</a>
+
+              
+
+<div class="menu_link_content menu-link-contentsecondary view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+        
+  </div>
+      </li>
+  
+  <li class="user__item user__item-signout menu-item">
+    <a href="">Sign out</a>
+
+              
+
+<div class="menu_link_content menu-link-contentsecondary view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+        
+  </div>
+      </li>
+</ul>
+
+  </div>
+      </li>
+  
+  <li class="user__item user__item-cart menu-item">
+    <a href="https://shop.kingarthurflour.com/CartDisplay">View your cart</a>
+
+              
+
+<div class="menu_link_content menu-link-contentsecondary view-mode-default menu-dropdown menu-dropdown-0 menu-type-default">
+        
+  </div>
+      </li>
+</ul>
+
+  </nav>
+
+    </nav>
+  </div>
+
+      <button class="menu__trigger" aria-haspopup="true"><span class="visually-hidden">Menu</span></button>
+    </div>
+
+          <nav class="header-subnav">
+          <div class="region region-subnav-menu">
+    <nav role="navigation" aria-labelledby="block-subnavrecipes-menu" id="block-subnavrecipes">
+            
+  <h2 class="visually-hidden" id="block-subnavrecipes-menu">Subnav: Recipes</h2>
+  
+
+        
+
+                <ul data-region="subnav_menu" class="menu-subnav-recipes menu-level-0">
+                        <li>
+            <span>Categories</span>
+                          
+                  <ul>
+                          <li>
+            <a href="/recipes/biscuits-shortcakes" data-drupal-link-system-path="taxonomy/term/8406">Biscuits &amp; Shortcakes</a>
+                      </li>
+                  <li>
+            <a href="/recipes/bread" title="Bread Recipes" data-drupal-link-system-path="taxonomy/term/361">Bread</a>
+                      </li>
+                  <li>
+            <a href="/recipes/buns-rolls" title="Recipes for Buns &amp; Rolls" data-drupal-link-system-path="taxonomy/term/8411">Buns &amp; Rolls</a>
+                      </li>
+                  <li>
+            <a href="/recipes/cake" title="Cake Recipes" data-drupal-link-system-path="taxonomy/term/446">Cake</a>
+                      </li>
+                  <li>
+            <a href="/recipes/chocolates-candies" data-drupal-link-system-path="taxonomy/term/8596">Chocolates &amp; Candies</a>
+                      </li>
+                  <li>
+            <a href="/recipes/coffeecake" data-drupal-link-system-path="taxonomy/term/8601">Coffeecake</a>
+                      </li>
+                  <li>
+            <a href="/recipes/cookies-bars" data-drupal-link-system-path="taxonomy/term/8356">Cookies &amp; Bars</a>
+                      </li>
+                  <li>
+            <a href="/recipes/crackers" title="Cracker Recipes" data-drupal-link-system-path="taxonomy/term/8921">Crackers</a>
+                      </li>
+                  <li>
+            <a href="/recipes/crisps-cobblers" title="Recipes for Crisps &amp; Cobblers" data-drupal-link-system-path="taxonomy/term/8756">Crisps &amp; Cobblers</a>
+                      </li>
+                  <li>
+            <a href="/recipes/doughnuts" title="Doughnut Recipes" data-drupal-link-system-path="taxonomy/term/8611">Doughnuts</a>
+                      </li>
+                  <li>
+            <a href="/recipes/glazes-toppings" data-drupal-link-system-path="taxonomy/term/8281">Glazes &amp; Toppings</a>
+                      </li>
+                  <li>
+            <a href="/recipes/ice-cream-sorbet" title="Ice Cream &amp; Sorbet Recipes" data-drupal-link-system-path="taxonomy/term/8826">Ice Cream &amp; Sorbet</a>
+                      </li>
+                  <li>
+            <a href="/recipes/main-dish" title="Recipes for Main Dishes" data-drupal-link-system-path="taxonomy/term/8766">Main Dish</a>
+                      </li>
+                  <li>
+            <a href="/recipes/miscellaneous" title="Miscellaneous Recipes" data-drupal-link-system-path="taxonomy/term/8806">Miscellaneous</a>
+                      </li>
+                  <li>
+            <a href="/recipes/muffins-popovers" title="Muffin and Popover Recipes" data-drupal-link-system-path="taxonomy/term/8671">Muffins &amp; Popovers</a>
+                      </li>
+                  <li>
+            <a href="/recipes/pancakes-waffles" title="Pancake &amp; Waffle Recipes" data-drupal-link-system-path="taxonomy/term/8631">Pancakes &amp; Waffles</a>
+                      </li>
+                  <li>
+            <a href="/recipes/pastry" title="Pastry Recipes" data-drupal-link-system-path="taxonomy/term/8781">Pastry</a>
+                      </li>
+                  <li>
+            <a href="/recipes/pie" title="Pie Recipes" data-drupal-link-system-path="taxonomy/term/8561">Pie</a>
+                      </li>
+                  <li>
+            <a href="/recipes/puddings-trifle" title="Pudding and Triffle Recipes" data-drupal-link-system-path="taxonomy/term/8386">Puddings &amp; Trifle</a>
+                      </li>
+                  <li>
+            <a href="/recipes/scones" title="Scone Reciepes" data-drupal-link-system-path="taxonomy/term/461">Scones</a>
+                      </li>
+              </ul>
+      
+                      </li>
+                  <li>
+            <a href="/recipes/collections" data-drupal-link-system-path="node/126">Collections</a>
+                          
+                  <ul>
+                          <li>
+            <a href="/recipes/collections/amazing-whole-grain-recipes" data-drupal-link-system-path="node/27846">Amazing Whole Grains</a>
+                      </li>
+                  <li>
+            <a href="/recipes/collections/bake-to-share" data-drupal-link-system-path="node/28311">Bake to Share</a>
+                      </li>
+                  <li>
+            <a href="/recipes/collections/best-chocolate-recipes" title="Our Collection Chocolate Recipes" data-drupal-link-system-path="node/27866">Best Chocolate Recipes</a>
+                      </li>
+                  <li>
+            <a href="/recipes/collections/classic-cookie-recipes" data-drupal-link-system-path="node/28331">Classic Cookie Recipes</a>
+                      </li>
+                  <li>
+            <a href="/recipes/collections/easy-yeast-baking" data-drupal-link-system-path="node/28476">Easy Yeast Baking</a>
+                      </li>
+                  <li>
+            <a href="/recipes/collections/holiday-classics" data-drupal-link-system-path="node/28516">Holiday Classics</a>
+                      </li>
+                  <li>
+            <a href="/recipes/collections/last-minute-miracles" data-drupal-link-system-path="node/28521">Last Minute Miracles</a>
+                      </li>
+                  <li>
+            <a href="/recipes/collections/pjs-favorites" data-drupal-link-system-path="node/28351">PJ’s Favorites</a>
+                      </li>
+                  <li>
+            <a href="/recipes/collections/show-stoppers" data-drupal-link-system-path="node/28371">Show Stoppers</a>
+                      </li>
+                  <li>
+            <a href="/recipes/collections/sourdough-discard-recipes" data-drupal-link-system-path="node/28376">Sourdough Discard Recipes</a>
+                      </li>
+                  <li>
+            <span>—</span>
+                      </li>
+                  <li>
+            <a href="/recipes/collections" title="View All Recipe Collections" data-drupal-link-system-path="node/126">View All Recipe Collections</a>
+                      </li>
+              </ul>
+      
+                      </li>
+                  <li>
+            <span>Resources</span>
+                          
+                  <ul>
+                          <li>
+            <a href="/recipebox" title="Recipe Box" data-drupal-link-system-path="recipebox">Recipe Box</a>
+                      </li>
+                  <li>
+            <a href="/bakers-hotline" data-drupal-link-system-path="node/46">Bakers Hotline</a>
+                      </li>
+                  <li>
+            <a href="/learn/ingredient-weight-chart" data-drupal-link-system-path="node/27676">Ingredient Weight Chart</a>
+                      </li>
+                  <li>
+            <a href="/videos/baking-skills/how-to-measure-flour" data-drupal-link-system-path="node/28056">How to Measure Flour</a>
+                      </li>
+                  <li>
+            <a href="/recipes/resources/recipe-success-guide" data-drupal-link-system-path="node/28256">Recipe Success Guide</a>
+                      </li>
+              </ul>
+      
+                      </li>
+              </ul>
+      
+
+
+
+  </nav>
+
+  </div>
+
+      </nav>
+      </header>
+
+    <div class="region region-highlighted">
+    <div data-drupal-messages-fallback class="hidden"></div>
+
+  </div>
+
+
+  <main class="main" role="main">
+    <a id="main-content" tabindex="-1"></a>
+    
+          <section class="page-content-header">
+          <div class="region region-content-header">
+    <div id="block-nodequickview" class="block block-ctools block-entity-viewnode">
+  
+    
+      
+<article role="article" class="node node--type-recipe quickview quickview--recipe">
+  <div class="quickview__content">
+          
+<nav class="breadcrumb" role="navigation" aria-labelledby="system-breadcrumb">
+  <ol class="breadcrumb__wrap">
+      <li class="breadcrumb__item">
+              <a href="/recipes">Recipes</a>
+          </li>
+      <li class="breadcrumb__item">
+              <a href="/recipes/bread">Bread</a>
+          </li>
+      <li class="breadcrumb__item">
+              <a href="/recipes/pizza">Pizza</a>
+          </li>
+    </ol>
+</nav>
+
+    
+    <h1><span>Pizza Crust</span>
+</h1>
+
+    <div class="quickview__meta">
+      <div class="quickview__reviews reviews">
+                  <a class="reviews__jumplink" href="#review-section">
+                              <span class="reviews__label">183 Reviews</span>
+                                <span class="rating rating-is-50">4.6 out of 5 stars</span>
+                            </a>
+              </div>
+
+              <div class="share js-kaf-share-widget no-shares">
+  <div class="share__label">Shares</div>
+  <div class="share__count js-kaf-share-count hidden"></div>
+
+  <ul class="share__btn-group" role="region" aria-label="Social share">
+    <li><a class="share__btn share__btn--facebook js-kaf-share-button-facebook">Share on Facebook</a></li>
+    <li><a class="share__btn share__btn--email js-kaf-share-button-email">Share by Email</a></li>
+    <li><a class="share__btn share__btn--pinterest js-kaf-share-button-pinterest">Share on Pinterest</a></li>
+    <li><a class="share__btn share__btn--twitter js-kaf-share-button-twitter">Share on Twitter</a></li>
+  </ul>
+</div>
+
+          </div>
+
+    <div class="quickview__description">
+        <p>What a treat — hot homemade pizza, with exactly the toppings you like. And this crust adapts to YOUR schedule: make the dough now, and serve fresh pizza up to 2 days later. Please read this recipe all the way through before starting. It gives you a lot of baking options, and you want to choose the one that best fits your schedule.</p>
+
+    </div>
+
+    <div class="stats stats--recipe with-rule">
+              <div class="stat__item stat__item--prep">
+          <div class="label">Prep</div>
+          <span>20 mins</span>
+        </div>
+      
+              <div class="stat__item stat__item--bake">
+          <div class="label">Bake</div>
+          <span>18 to 30 mins</span>
+        </div>
+      
+              <div class="stat__item stat__item--total">
+          <div class="label">Total</div>
+          <span>3 hrs 8 mins</span>
+        </div>
+          </div>
+
+    <div class="stats stats--recipe">
+              <div class="stat__item stat__item--yield">
+          <div class="label">Yield</div>
+          <span>1 or 2 standard round pizzas, or 1 large rectangular pizza, about 12 servings</span>
+        </div>
+      
+              <div class="stat__item stat__item--recipe-box">
+          <a href="/recipebox" class="btn btn--save js-kaf-recipe-box-add" data-recipe-id="16301" data-recipe-uuid="68c3394f-f5c8-4527-a09a-2c900e223172">Save Recipe</a>
+        </div>
+      
+      <div class="stat__item stat__item--print">
+        <a href="javascript:window.print()" class="btn btn--print">Print</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="quickview__media">
+            <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+              <source srcset="/sites/default/files/styles/featured_image/public/recipe_legacy/20-3-large.jpg?itok=1EY8KWJG 1x, /sites/default/files/styles/featured_image_2x/public/recipe_legacy/20-3-large.jpg?itok=1v5DoLeu 2x" media="(min-width: 480px)" type="image/jpeg"/>
+              <source srcset="/sites/default/files/styles/featured_image_sm/public/recipe_legacy/20-3-large.jpg?itok=ui7tASrF 1x, /sites/default/files/styles/featured_image_sm_2x/public/recipe_legacy/20-3-large.jpg?itok=TlZb-8vH 2x" type="image/jpeg"/>
+            <!--[if IE 9]></video><![endif]-->
+            <img src="/sites/default/files/styles/featured_image/public/recipe_legacy/20-3-large.jpg?itok=1EY8KWJG" alt="Pizza Crust" />
+
+  </picture>
+
+
+
+
+
+  </div>
+</article>
+
+  </div>
+
+  </div>
+
+      </section>
+    
+
+    <section class="page-content">
+        <div class="region region-content">
+    <div role="article" class="node node--type-recipe node--promoted node--view-mode-full">
+  
+  
+  
+
+  <div class="node__content">
+    <section class="recipe recipe--detail">
+      <aside class="recipe__ingredients">
+        <h4>Ingredients</h4>
+          <div class="ingredient-section">
+  
+  <ul class="list--bullets">
+      <li>2 teaspoons <a href="https://shop.kingarthurflour.com/items/red-star-active-dry-yeast-16-oz" target="_blank" data-name="Red Star Active Dry Yeast - 16 oz." data-sku="201265" data-price="$6.95">active dry yeast</a> or <a href="https://shop.kingarthurflour.com/items/saf-red-instant-yeast-16-oz" target="_blank" data-name="SAF Red Instant Yeast - 16 oz." data-sku="201264" data-price="$5.95">instant yeast</a></li>
+      <li>7/8 to 1 1/8 cups (198g to 255g) lukewarm water*</li>
+      <li>2 tablespoons (25g) olive oil</li>
+      <li>3 cups (361g) <a href="https://shop.kingarthurflour.com/items/king-arthur-unbleached-all-purpose-flour-5-lb" target="_blank" data-name="King Arthur Unbleached All-Purpose Flour 5 lb." data-sku="01050" data-price="$4.95">King Arthur Unbleached All-Purpose Flour</a></li>
+      <li>1 1/4 teaspoons salt</li>
+  </ul>
+
+
+      <div class="ingredient-section__footnote">
+        *Use the lesser amount in summer (or in a humid environment), the greater amount in winter (or in a dry climate), and somewhere in between the rest of the year, or if your house is climate controlled.
+
+    </div>
+  </div>
+
+
+
+                  <a href="/nutritional-info/16301" class="btn btn--secondary use-ajax" data-dialog-type="modal" data-dialog-options="{&quot;width&quot;:&quot;90%&quot;, &quot;dialogClass&quot;:&quot;kaf-modal&quot;}">Nutrition Information</a>
+              </aside>
+
+      <article class="recipe__instructions">
+                <h4>Instructions</h4>
+        <div class="field field--recipe-steps">
+  <ol class="list--numbers">
+          <li class="field__item">
+
+        <p>If you're using active dry yeast, dissolve it, with a pinch of sugar, in 2 tablespoons of the lukewarm water. Let the yeast and water sit at room temperature for 15 minutes, until the mixture has bubbled and expanded. If you're using instant yeast, you can skip this step.</p>
+
+        
+      </li>
+          <li class="field__item">
+
+        <p>Combine the dissolved yeast (or the instant yeast) with the remainder of the ingredients. Mix and knead everything together—by hand, mixer or bread machine set on the dough cycle—till you've made a soft, smooth dough. If you're kneading in a stand mixer, it should take 4 to 5 minutes at second speed, and the dough should barely clean the sides of the bowl, perhaps sticking a bit at the bottom. Don't over-knead the dough; it should hold together, but can still look fairly rough on the surface.</p>
+
+        
+      </li>
+          <li class="field__item">
+
+        <p>To make pizza up to 24 hours later, skip to step 5.</p>
+
+        
+      </li>
+          <li class="field__item">
+
+        <p><strong>To make pizza now: </strong>Place the dough in a lightly greased bowl, cover the bowl, and allow it to rise till it's very puffy. This will take about an hour using instant yeast, or 90 minutes using active dry. If it takes longer, that's OK; just give it some extra time.</p>
+
+                  <aside>
+            <h4>Take it a step further</h4>
+            
+
+
+<div role="article" class="article article--embed">
+  
+  
+
+      <a href="/blog/2019/02/27/the-best-thin-crust-pizza" rel="bookmark">
+            <img src="/sites/default/files/blog-featured/The-best-thin-crust-pizza-1.jpg" width="1200" height="800" alt="The best thin-crust pizza via @kingarthurflour" />
+
+
+
+
+
+    </a>
+
+    <div class="article__content">
+
+      
+        <span class="eyebrow">Blog</span>
+        <h5><a href="/blog/2019/02/27/the-best-thin-crust-pizza" rel="bookmark"><span>The best thin-crust pizza</span>
+</a></h5>
+        <p class="article__author">By PJ Hamel</p>
+
+      
+    </div>
+  </div>
+
+          </aside>
+        
+      </li>
+          <li class="field__item">
+
+        <p><strong>To make pizza later:</strong> Allow the dough to rise, covered, for 45 minutes at room temperature. Refrigerate the dough for 4 hours (or for up to 24 hours); it will rise slowly as it chills. This step allows you more schedule flexibility; it also develops the crust's flavor. About 2 to 3 hours before you want to serve pizza, remove the dough from the refrigerator.</p>
+
+        
+      </li>
+          <li class="field__item">
+
+        <p>Decide what size, shape, and thickness of pizza you want to make. This recipe will make one of the following choices:<br />
+Two 1/2"-thick 14" round pizzas (pictured);<br />
+Two 3/4"-thick 12" round pizzas;<br />
+One 3/4" to 1"-thick 13" x 18" rectangular (Sicilian-style) pizza (pictured);<br />
+One 1 1/2"-thick 9" x 13" rectangular pizza;<br />
+One 1"-thick 14" round pizza.</p>
+
+        
+      </li>
+          <li class="field__item">
+
+        <p>Divide the dough in half, for two pizzas; or leave it whole for one pizza.</p>
+
+        
+      </li>
+          <li class="field__item">
+
+        <p>If you're making a rectangular pizza, shape the dough into a rough oval. For a round pizza, shape it into a rough circle. In either case, don't pat it flat; just stretch it briefly into shape. Allow the dough to rest, covered with an overturned bowl or lightly greased plastic wrap, for 15 minutes.</p>
+
+        
+      </li>
+          <li class="field__item">
+
+        <p>Use vegetable oil pan spray to lightly grease the pan(s) of your choice. Drizzle olive oil into the bottom of the pan(s). The pan spray keeps the pizza from sticking; the olive oil gives the crust great flavor and crunch.</p>
+
+        
+      </li>
+          <li class="field__item">
+
+        <p>Place the dough in the prepared pan(s). Press it over the bottom of the pan, stretching it towards the edges. You'll probably get about two-thirds of the way there before the dough starts shrinking back; walk away for 15 minutes. Cover the dough while you're away, so it doesn't dry out.</p>
+
+        
+      </li>
+          <li class="field__item">
+
+        <p>When you come back, you should be able to pat the dough closer to the corners of the pan. Repeat the rest and dough-stretch one more time, if necessary; your goal is to get the dough to fill the pan as fully as possible.</p>
+
+        
+      </li>
+          <li class="field__item">
+
+        <p>Allow the dough to rise, covered, till it's noticeably puffy, about 90 minutes (if it hasn't been refrigerated); or 2 to 2 1/2 hours (if it's been refrigerated). Towards the end of the rising time, preheat the oven to 450°F.</p>
+
+        
+      </li>
+          <li class="field__item">
+
+        <p>Bake the pizza on the lower oven rack till it looks and feels set on top, and is just beginning to brown around the edge of the crust, but is still pale on top. This will take about 8 minutes for thinner crust pizza; about 10 to 12 minutes for medium thickness; and 12 to 14 minutes for thick-crust pizza. If you're baking two pizzas, reverse them in the oven (top to bottom, bottom to top) midway through the baking period.</p>
+
+        
+      </li>
+          <li class="field__item">
+
+        <p><strong>To serve pizza immediately: </strong>Remove it from the oven, and arrange your toppings of choice on top. Return to the oven, and bake on the upper oven rack for an additional 10 to 15 minutes, until the crust is nicely browned, both top and bottom, and the cheese is melted. Check it midway through, and move it to the bottom rack if the top is browning too much, or the bottom not enough.</p>
+
+        
+      </li>
+          <li class="field__item">
+
+        <p><strong>To serve pizza up to 2 days later:</strong> Remove the untopped, partially baked crust from the oven, cool completely on a rack, wrap in plastic, and store at room temperature. When ready to serve, top and bake in a preheated 450°F oven, adding a couple of minutes to the baking times noted above. Your goal is a pizza whose crust is browned, and whose toppings are hot/melted.</p>
+
+        
+      </li>
+          <li class="field__item">
+
+        <p>Remove the pizza from the oven, and transfer it from the pan to a rack to cool slightly before serving. For easiest serving, cut with a pair of scissors.</p>
+
+        
+      </li>
+      </ol>
+</div>
+
+
+                  <div class="recipe__tips">
+            <h4>Tips from our Bakers</h4>
+            <ul class="list--star">
+      <li><div class="eck-entity">
+      Make pizza any shape or size or thickness you like; the above guidelines are simply suggestions. Understand that the thickest-crust pizza will need to bake longer than the thinnest-crust version.
+
+</div>
+</li>
+      <li><div class="eck-entity">
+      To freeze partially baked pizza crust: Bake crust as directed in step 13. Remove from the oven, cool to room temperature, wrap well, and freeze for up to 3 months. When you're ready to serve pizza, remove the crust from the freezer, and allow it to thaw, loosely wrapped, at room temperature. Once it's completely thawed, complete pizza by starting at step 15 above.
+
+</div>
+</li>
+      <li><div class="eck-entity">
+      What else can you to with this tasty crust? How about fresh, hot cheese stuffed bread sticks? Our <a href="//blog.kingarthurflour.com/2014/02/05/cheese-stuffed-bread-sticks">step by step blog </a> will show you what pitfalls to avoid on your way to these pizza shop favorites.
+
+</div>
+</li>
+      <li><div class="eck-entity">
+      <p>
+<style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+<!--td {border: 1px solid #ccc;}br {mso-data-placement:same-cell;}-->
+
+/*--><!]]>*/
+</style>
+Want to experiment with different cheeses beyond the standard mozzarella? Choose those that melt well: Fontina, cheddar, Jack, provolone, brick, Gouda, and Muenster are all good candidates.</p>
+
+
+</div>
+</li>
+      <li><div class="eck-entity">
+      <p>
+<style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+<!--td {border: 1px solid #ccc;}br {mso-data-placement:same-cell;}-->
+
+/*--><!]]>*/
+</style>
+To add flexibility to your schedule, let the dough rise once at room temperature, gently deflate it, then cover and put in the fridge overnight. Next day, remove the dough from the fridge and stretch it into its pan. Let it rest and warm up until slightly puffy, then proceed with the recipe as written.</p>
+
+
+</div>
+</li>
+      <li><div class="eck-entity">
+      <p>
+<style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+<!--td {border: 1px solid #ccc;}br {mso-data-placement:same-cell;}-->
+
+/*--><!]]>*/
+</style>
+If you like pizza with a deep golden brown, crispy crust, bake on a <a href="https://shop.kingarthurflour.com/items/bread-and-pizza-baking-stone">baking stone</a>. Preheat the stone in the middle of the oven for 45 to 60 minutes. Shape and top your pizza on <a href="https://shop.kingarthurflour.com/items/baking-parchment-paper-set-of-100-half-sheets">parchment paper</a> or a baker's peel and when you're ready to bake, slide the pizza onto the hot stone (parchment and all, if you're using parchment).</p>
+
+
+</div>
+</li>
+  </ul>
+
+          </div>
+        
+                  <div class="share js-kaf-share-widget no-shares">
+  <div class="share__label">Shares</div>
+  <div class="share__count js-kaf-share-count hidden"></div>
+
+  <ul class="share__btn-group" role="region" aria-label="Social share">
+    <li><a class="share__btn share__btn--facebook js-kaf-share-button-facebook">Share on Facebook</a></li>
+    <li><a class="share__btn share__btn--email js-kaf-share-button-email">Share by Email</a></li>
+    <li><a class="share__btn share__btn--pinterest js-kaf-share-button-pinterest">Share on Pinterest</a></li>
+    <li><a class="share__btn share__btn--twitter js-kaf-share-button-twitter">Share on Twitter</a></li>
+  </ul>
+</div>
+
+              </article>
+
+      <div class="recipe-bakers-hotline">
+  <div class="recipe-bakers-hotline__content">
+    <h4>Baker’s Resources</h4>
+    <ul class="list--links">
+      <li><a href="/guides/recipe-success-guide">Recipe success guide</a></li>
+      <li><a href="/learn/resources/baking-tips-techniques">Tips & techniques</a></li>
+      <li><a href="/learn/resources/high-altitude-baking">High-altitude baking</a></li>
+      <li><a href="/learn/resources/yeast">Baker’s yeast</a></li>
+      <li><a href="/learn/ingredient-weight-chart">Ingredient weight chart</a></li>
+      <li><a href="/learn/resources/tools-and-pans">Tools & pans</a></li>
+      <li><a href="/videos/baking-skills/how-to-measure-flour">How to measure flour</a></li>
+      <li><a href="/about/products/docs/flour-safety">Safe handling instructions</a></li>
+    </ul>
+  </div>
+
+  <aside class="recipe-bakers-hotline__aside">
+    <div class="cta cta--card-small">
+      <img src="/themes/custom/kaf_nextgenweb/images/bakers-hotline.png" alt="Baker’s Hotline" />
+      <div class="cta__content">
+        <a class="btn btn--secondary" href="/launchchat">Chat with a baker</a>
+      </div>
+    </div>
+  </aside>
+</div>
+    </section>
+
+  </div>
+</div>
+
+  </div>
+
+    </section>
+
+    
+    
+            <div class="region region-content-footer">
+    
+<div id="block-recipe-newsletter-signup" class="block block-webform block-webform-block">
+  <div class="newsletter-wrapper">
+    
+    
+
+          <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+              <source srcset="/sites/default/files/styles/featured_image/public/recipe_legacy/20-3-large.jpg?itok=1EY8KWJG 1x, /sites/default/files/styles/featured_image_2x/public/recipe_legacy/20-3-large.jpg?itok=1v5DoLeu 2x" media="(min-width: 480px)" type="image/jpeg"/>
+              <source srcset="/sites/default/files/styles/featured_image_sm/public/recipe_legacy/20-3-large.jpg?itok=ui7tASrF 1x, /sites/default/files/styles/featured_image_sm_2x/public/recipe_legacy/20-3-large.jpg?itok=TlZb-8vH 2x" type="image/jpeg"/>
+            <!--[if IE 9]></video><![endif]-->
+            <img src="/sites/default/files/styles/featured_image/public/recipe_legacy/20-3-large.jpg?itok=1EY8KWJG" alt="Pizza Crust" />
+
+  </picture>
+
+
+
+
+
+    <div class="newsletter-form-area">
+      <h3 class="heading">For more recipes like this subscribe to our newsletter</h3>
+
+              <form class="webform-submission-form webform-submission-add-form webform-submission-newsletter-signup-form webform-submission-newsletter-signup-add-form webform-submission-newsletter-signup-node-16301-form webform-submission-newsletter-signup-node-16301-add-form js-webform-details-toggle webform-details-toggle" data-drupal-selector="webform-submission-newsletter-signup-node-16301-add-form" action="/recipes/pizza-crust-recipe" method="post" id="webform-submission-newsletter-signup-node-16301-add-form" accept-charset="UTF-8">
+  
+  <div class="js-form-item form-item js-form-type-email form-item-email js-form-item-email">
+      <label for="edit-email" class="js-form-required form-required">Email</label>
+        <input autocomplete="off" data-drupal-selector="edit-email" type="email" id="edit-email" name="email" value="" size="60" maxlength="254" placeholder="Email address" class="form-email required" required="required" aria-required="true" />
+
+        </div>
+<div data-drupal-selector="edit-actions" class="form-actions webform-actions js-form-wrapper form-wrapper" id="edit-actions"><input class="webform-button--submit button button--primary js-form-submit form-submit" data-drupal-selector="edit-actions-submit" type="submit" id="edit-actions-submit" name="op" value="Sign up" />
+
+</div>
+<input autocomplete="off" data-drupal-selector="form-z5dgtqwhwoas-uuc5ddrmd9thz1jtm6wz3gziyv4e5q" type="hidden" name="form_build_id" value="form-z5dgtqWHwoAS_uUC5ddRMd9ThZ1JTM6Wz3GZiYv4e5Q" />
+<input data-drupal-selector="edit-webform-submission-newsletter-signup-node-16301-add-form" type="hidden" name="form_id" value="webform_submission_newsletter_signup_node_16301_add_form" />
+
+
+  
+</form>
+
+          </div>
+  </div>
+</div>
+<div id="block-kafrecommendedrecipes" class="block block-kaf-recipe block-kaf-recommended-recipes">
+  
+    
+      <div class="related related--recipes">
+  <div class="eyebrow">Recipes</div>
+  <h3>Recommended Recipes</h3>
+  <div class="related__nodes">
+    
+<div role="article" class="recipe recipe--card">
+  
+  
+
+  <a href="/recipes/gluten-free-now-or-later-pizza-made-with-baking-mix-recipe">
+          <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+              <source srcset="/sites/default/files/styles/kaf_thumbnail_large/public/recipe_legacy/5045-3-large.jpg?itok=r4YZgLJW 1x, /sites/default/files/styles/kaf_thumbnail_large_2x_880x596_/public/recipe_legacy/5045-3-large.jpg?itok=sB_F8_r9 2x" media="(min-width: 768px)" type="image/jpeg"/>
+              <source srcset="/sites/default/files/styles/kaf_thumbnail/public/recipe_legacy/5045-3-large.jpg?itok=3ONMaQ9Z 1x, /sites/default/files/styles/kaf_thumbnail_2x/public/recipe_legacy/5045-3-large.jpg?itok=aRDR5u9a 2x" media="(min-width: 480px)" type="image/jpeg"/>
+              <source srcset="/sites/default/files/styles/kaf_thumbnail_small_200x135_/public/recipe_legacy/5045-3-large.jpg?itok=wli94NGR 1x, /sites/default/files/styles/kaf_thumbnail_small_2x_400x271_/public/recipe_legacy/5045-3-large.jpg?itok=pWVOerWC 2x" type="image/jpeg"/>
+            <!--[if IE 9]></video><![endif]-->
+            <img src="/sites/default/files/styles/kaf_thumbnail/public/recipe_legacy/5045-3-large.jpg?itok=3ONMaQ9Z" alt="Gluten-Free Now-or-Later Pizza made with baking mix" />
+
+  </picture>
+
+
+
+
+
+  </a>
+
+  <div class="recipe__content">
+          <span class="eyebrow">Pizza</span>
+    
+          <h5>
+        <a href="/recipes/gluten-free-now-or-later-pizza-made-with-baking-mix-recipe">Gluten-Free Now-or-Later Pizza made with baking mix</a>
+      </h5>
+      </div>
+</div>
+
+
+<div role="article" class="recipe recipe--card">
+  
+  
+
+  <a href="/recipes/the-fastest-homemade-pizza-ever-recipe">
+          <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+              <source srcset="/sites/default/files/styles/kaf_thumbnail_large/public/recipe_legacy/5707-3-large.jpg?itok=HpHhKHpO 1x, /sites/default/files/styles/kaf_thumbnail_large_2x_880x596_/public/recipe_legacy/5707-3-large.jpg?itok=Z-Tsg48h 2x" media="(min-width: 768px)" type="image/jpeg"/>
+              <source srcset="/sites/default/files/styles/kaf_thumbnail/public/recipe_legacy/5707-3-large.jpg?itok=hMEAk5T7 1x, /sites/default/files/styles/kaf_thumbnail_2x/public/recipe_legacy/5707-3-large.jpg?itok=e_2PVkaR 2x" media="(min-width: 480px)" type="image/jpeg"/>
+              <source srcset="/sites/default/files/styles/kaf_thumbnail_small_200x135_/public/recipe_legacy/5707-3-large.jpg?itok=kGo_elsn 1x, /sites/default/files/styles/kaf_thumbnail_small_2x_400x271_/public/recipe_legacy/5707-3-large.jpg?itok=FgEJPt1C 2x" type="image/jpeg"/>
+            <!--[if IE 9]></video><![endif]-->
+            <img src="/sites/default/files/styles/kaf_thumbnail/public/recipe_legacy/5707-3-large.jpg?itok=hMEAk5T7" alt="The Fastest Homemade Pizza Ever" />
+
+  </picture>
+
+
+
+
+
+  </a>
+
+  <div class="recipe__content">
+          <span class="eyebrow">Pizza</span>
+    
+          <h5>
+        <a href="/recipes/the-fastest-homemade-pizza-ever-recipe">The Fastest Homemade Pizza Ever</a>
+      </h5>
+      </div>
+</div>
+
+
+<div role="article" class="recipe recipe--card">
+  
+  
+
+  <a href="/recipes/spinach-and-artichoke-pizza-recipe">
+          <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+              <source srcset="/sites/default/files/styles/kaf_thumbnail_large/public/recipe_legacy/5697-3-large.jpg?itok=XW2of816 1x, /sites/default/files/styles/kaf_thumbnail_large_2x_880x596_/public/recipe_legacy/5697-3-large.jpg?itok=0cpjOyXG 2x" media="(min-width: 768px)" type="image/jpeg"/>
+              <source srcset="/sites/default/files/styles/kaf_thumbnail/public/recipe_legacy/5697-3-large.jpg?itok=2qgzuuKq 1x, /sites/default/files/styles/kaf_thumbnail_2x/public/recipe_legacy/5697-3-large.jpg?itok=jBt9YFCu 2x" media="(min-width: 480px)" type="image/jpeg"/>
+              <source srcset="/sites/default/files/styles/kaf_thumbnail_small_200x135_/public/recipe_legacy/5697-3-large.jpg?itok=uuG_Kq_X 1x, /sites/default/files/styles/kaf_thumbnail_small_2x_400x271_/public/recipe_legacy/5697-3-large.jpg?itok=RbWDbyTK 2x" type="image/jpeg"/>
+            <!--[if IE 9]></video><![endif]-->
+            <img src="/sites/default/files/styles/kaf_thumbnail/public/recipe_legacy/5697-3-large.jpg?itok=2qgzuuKq" alt="Spinach and Artichoke Pizza" />
+
+  </picture>
+
+
+
+
+
+  </a>
+
+  <div class="recipe__content">
+          <span class="eyebrow">Pizza</span>
+    
+          <h5>
+        <a href="/recipes/spinach-and-artichoke-pizza-recipe">Spinach and Artichoke Pizza</a>
+      </h5>
+      </div>
+</div>
+
+
+<div role="article" class="recipe recipe--card">
+  
+  
+
+  <a href="/recipes/brick-oven-style-pizza-recipe">
+          <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+              <source srcset="/sites/default/files/styles/kaf_thumbnail_large/public/recipe_legacy/1467729185734.jpg?itok=orHpwR2H 1x, /sites/default/files/styles/kaf_thumbnail_large_2x_880x596_/public/recipe_legacy/1467729185734.jpg?itok=hoUQjtMZ 2x" media="(min-width: 768px)" type="image/jpeg"/>
+              <source srcset="/sites/default/files/styles/kaf_thumbnail/public/recipe_legacy/1467729185734.jpg?itok=QVBm9Ffy 1x, /sites/default/files/styles/kaf_thumbnail_2x/public/recipe_legacy/1467729185734.jpg?itok=JEAuwb21 2x" media="(min-width: 480px)" type="image/jpeg"/>
+              <source srcset="/sites/default/files/styles/kaf_thumbnail_small_200x135_/public/recipe_legacy/1467729185734.jpg?itok=LLTk2aL6 1x, /sites/default/files/styles/kaf_thumbnail_small_2x_400x271_/public/recipe_legacy/1467729185734.jpg?itok=DgiwcH9U 2x" type="image/jpeg"/>
+            <!--[if IE 9]></video><![endif]-->
+            <img src="/sites/default/files/styles/kaf_thumbnail/public/recipe_legacy/1467729185734.jpg?itok=QVBm9Ffy" alt="Brick Oven Pizza" />
+
+  </picture>
+
+
+
+
+
+  </a>
+
+  <div class="recipe__content">
+          <span class="eyebrow">Pizza</span>
+    
+          <h5>
+        <a href="/recipes/brick-oven-style-pizza-recipe">Brick Oven-Style Pizza</a>
+      </h5>
+      </div>
+</div>
+
+
+  </div>
+</div>
+
+  </div>
+<div id="block-kafreciperelatedproducts" class="block block-kaf-recipe block-kaf-related-products">
+  
+    
+      <div class="related related--products">
+  <div class="eyebrow">Shop</div>
+  <h3>Related Products</h3>
+  <div class="related__nodes">
+    
+<div role="article" class="product product--card">
+  
+  
+
+            <a href="https://shop.kingarthurflour.com/items/red-star-active-dry-yeast-16-oz">
+            <img src="/sites/default/files/product-image/1460_07_10_2012__17_08_10_700.jpg" width="700" height="700" />
+
+
+          </a>
+      
+  <div class="product__content">
+    <h5 data-sku="201265" data-price="$6.95">
+              <a href="https://shop.kingarthurflour.com/items/red-star-active-dry-yeast-16-oz">
+              <span>Red Star Active Dry Yeast - 16 oz.</span>
+
+              </a>
+          </h5>
+
+    <div class="product__reviews">
+              <span class="rating rating-is-50">4.9 out of 5 stars</span>
+                    <span class="reviews__label">104 Reviews</span>
+          </div>
+  </div>
+</div>
+
+<div role="article" class="product product--card">
+  
+  
+
+            <a href="https://shop.kingarthurflour.com/items/saf-red-instant-yeast-16-oz">
+            <img src="/sites/default/files/product-image/1458_05_23_2016__13_18_48_700.jpg" width="700" height="700" />
+
+
+          </a>
+      
+  <div class="product__content">
+    <h5 data-sku="201264" data-price="$5.95">
+              <a href="https://shop.kingarthurflour.com/items/saf-red-instant-yeast-16-oz">
+              <span>SAF Red Instant Yeast - 16 oz.</span>
+
+              </a>
+          </h5>
+
+    <div class="product__reviews">
+              <span class="rating rating-is-50">4.8 out of 5 stars</span>
+                    <span class="reviews__label">893 Reviews</span>
+          </div>
+  </div>
+</div>
+
+<div role="article" class="product product--card">
+  
+  
+
+            <a href="https://shop.kingarthurflour.com/items/king-arthur-unbleached-all-purpose-flour-5-lb">
+            <img src="/sites/default/files/product-image/3005_10_15_2018__08_44_43_700.jpg" width="700" height="700" />
+
+
+          </a>
+      
+  <div class="product__content">
+    <h5 data-sku="01050" data-price="$4.95">
+              <a href="https://shop.kingarthurflour.com/items/king-arthur-unbleached-all-purpose-flour-5-lb">
+              <span>King Arthur Unbleached All-Purpose Flour 5 lb.</span>
+
+              </a>
+          </h5>
+
+    <div class="product__reviews">
+              <span class="rating rating-is-50">5 out of 5 stars</span>
+                    <span class="reviews__label">442 Reviews</span>
+          </div>
+  </div>
+</div>
+
+<div role="article" class="product product--card">
+  
+  
+
+            <a href="https://shop.kingarthurflour.com/items/baking-parchment-paper-set-of-100-half-sheets">
+            <img src="/sites/default/files/product-image/5854_10_23_2018__15_26_30_700.jpg" width="700" height="700" />
+
+
+          </a>
+      
+  <div class="product__content">
+    <h5 data-sku="100656" data-price="$22.95">
+              <a href="https://shop.kingarthurflour.com/items/baking-parchment-paper-set-of-100-half-sheets">
+              <span>Baking Parchment Paper - Set of 100 Half-Sheets</span>
+
+              </a>
+          </h5>
+
+    <div class="product__reviews">
+              <span class="rating rating-is-50">4.9 out of 5 stars</span>
+                    <span class="reviews__label">1950 Reviews</span>
+          </div>
+  </div>
+</div>
+
+  </div>
+</div>
+
+  </div>
+<div id="block-kafrecipereviews" class="block block-kaf-recipe block-kaf-recipe-reviews">
+  
+    
+      <div class="yotpo yotpo-main-widget" 
+  id="review-section"
+  data-product-id="20" 
+  data-name="Pizza Crust" 
+  data-url="https://www.kingarthurflour.com/recipes/pizza-crust-recipe" 
+  data-description="What a treat — hot homemade pizza, with exactly the toppings you like. And this crust adapts to YOUR schedule: make the dough now, and serve fresh pizza up to 2 days later. Please read this recipe all the way through before starting. It gives you a lot of baking options, and you want to choose the one that best fits your schedule.
+"
+></div>
+  </div>
+
+  </div>
+
+      </main>
+
+      <div class="page-below-connect">
+        <div class="region region-below-connect">
+    <div id="block-connectwithus" class="block block-block-content block-block-content1b703610-b351-4568-bcc6-a91a133f7a95">
+  
+    
+        <h2>Connect with us</h2>
+
+  </div>
+<div id="block-receiverecipesspecialoffers" class="block block-block-content block-block-contentc53da24a-b22e-4ce3-acdd-9e13a0c06f0e">
+  
+      <h3>Receive Recipes &amp; Special Offers</h3>
+    
+        <form id="footer-newsletter-form">
+<div class="form-item-email"><input aria-label="Email address" class="custom-form-field form-email" id="footer-email-input" placeholder="Email address" type="email" value="" /></div>
+
+<div class="form-actions webform-actions js-form-wrapper form-wrapper"><input class="webform-button--submit button" id="footer-email-submit" type="submit" value="submit" /></div>
+</form>
+
+<p><small style="display:block;">View our <a href="https://kingarthurflour.com/policies/privacy-policy" style="text-decoration:underline;" title="Privacy Policy">privacy policy</a></small></p>
+
+
+  </div>
+<div id="block-oursocialcommunities" class="block block-block-content block-block-content411ae0cb-f0be-450c-b0b1-d6a9848d6093">
+  
+      <h3>Our Social Communities</h3>
+    
+        <p><a class="icon-facebook" href="https://www.facebook.com/kingarthurflour/"><span class="visually-hidden">Facebook</span></a> <a class="icon-instagram" href="https://www.instagram.com/kingarthurflour/"><span class="visually-hidden">Instagram</span></a> <a class="icon-pinterest" href="https://www.pinterest.com/kingarthurflour/"><span class="visually-hidden">Pinterest</span></a> <a class="icon-twitter" href="https://twitter.com/kingarthurflour/"><span class="visually-hidden">Twitter</span></a> <a class="icon-youtube" href="https://www.youtube.com/user/KingArthurFlour"><span class="visually-hidden">YouTube</span></a></p>
+
+
+  </div>
+<div id="block-getintouch" class="block block-block-content block-block-contentf5d7c1ec-3561-40ba-b96c-6457ceecb13f">
+  
+      <h3>Get in Touch</h3>
+    
+        <p><a class="button contact-button" href="/launchchat">Chat | Email</a></p>
+
+
+  </div>
+
+  </div>
+
+    </div>
+  
+      <div class="page-below-values">
+        <div class="region region-below-values">
+    <div id="block-certifiedbcorporation" class="block block-block-content block-block-content900f3cf8-936b-4320-a12a-9f0aa9325299">
+  
+  
+                <img width="" height="" src="/sites/default/files/values-block/b-corp_6.svg" alt="Certified B Corporation Logo" />
+
+
+
+      </div>
+<div id="block-100employeeowned" class="block block-block-content block-block-content0b74f5eb-9c02-4f1a-af3c-f3fbe64c2200">
+  
+  
+                <img width="" height="" src="/sites/default/files/values-block/employee-owned_6.svg" alt="100% Employee-owned logo" />
+
+
+
+      </div>
+<div id="block-1fortheplanet" class="block block-block-content block-block-content8a5711d0-5544-4e42-bcdb-c59131dfa9d7">
+  
+  
+                <img width="" height="" src="/sites/default/files/values-block/for-the-planet_6.svg" alt="1% For The Planet Logo" />
+
+
+
+      </div>
+<div id="block-100committedtoquality" class="block block-block-content block-block-content08516c39-cfe6-4e33-b48e-379b68c53063">
+  
+  
+                <img width="" height="" src="/sites/default/files/values-block/quality_6.svg" alt="100% Committed to Quality Logo" />
+
+
+
+      </div>
+
+  </div>
+
+    </div>
+  
+  <footer class="footer" role="contentinfo">
+  <div class="footer-grid">
+          <div class="footer__first footer-menu">
+          <div class="region region-footer-first">
+    <nav role="navigation" aria-labelledby="block-kaf-nextgenweb-footerthebakerscatalogue-menu" id="block-kaf-nextgenweb-footerthebakerscatalogue">
+      
+  <h2 id="block-kaf-nextgenweb-footerthebakerscatalogue-menu">The Bakers Catalogue</h2>
+  
+
+        
+
+                <ul data-region="footer_first" class="menu-footer-bakers-catalog menu-level-0">
+                        <li>
+            <a href="https://shop.kingarthurflour.com/" title="Shop our full catalogue of products">Shop Online</a>
+                      </li>
+                  <li>
+            <a href="https://shop.kingarthurflour.com/quickshop">Quick Shop</a>
+                      </li>
+                  <li>
+            <a href="https://shop.kingarthurflour.com/OrderTracking" title="Track the shipping status of your order">Order Tracking</a>
+                      </li>
+                  <li>
+            <a href="https://shop.kingarthurflour.com/rewards/" title="Learn about our loyalty programs">Baker&#039;s Rewards Plus</a>
+                      </li>
+                  <li>
+            <a href="https://shop.kingarthurflour.com/customerservice/promotions.html">Current Promotions</a>
+                      </li>
+                  <li>
+            <a href="https://shop.kingarthurflour.com/landing.jsp?go=DefaultCatSignup&amp;ref=pub1" title="Add your name to our mailing list">Request a Catalogue</a>
+                      </li>
+                  <li>
+            <a href="https://shop.kingarthurflour.com/customerservice/returns.html" title="Information about Returns &amp; Refunds">Returns &amp; Refunds</a>
+                      </li>
+              </ul>
+      
+
+
+
+  </nav>
+
+  </div>
+
+      </div>
+    
+          <div class="footer__second footer-menu">
+          <div class="region region-footer-second">
+    <nav role="navigation" aria-labelledby="block-kaf-nextgenweb-footerforhomebakers-menu" id="block-kaf-nextgenweb-footerforhomebakers">
+      
+  <h2 id="block-kaf-nextgenweb-footerforhomebakers-menu">For Home Bakers</h2>
+  
+
+        
+
+                <ul data-region="footer_second" class="menu-footer-home-bakers menu-level-0">
+                        <li>
+            <a href="/recipes" data-drupal-link-system-path="node/116">Recipes</a>
+                      </li>
+                  <li>
+            <a href="/learn/guides" data-drupal-link-system-path="node/151">Baking Guides</a>
+                      </li>
+                  <li>
+            <a href="/bakers-hotline" data-drupal-link-system-path="node/46">Baker&#039;s Hotline</a>
+                      </li>
+                  <li>
+            <a href="/baking-school/calendar?cat=3" data-drupal-link-query="{&quot;cat&quot;:&quot;3&quot;}" data-drupal-link-system-path="node/28251">Classes for Home Bakers </a>
+                      </li>
+                  <li>
+            <a href="/view-all-events" data-drupal-link-system-path="node/181">Baking Contests</a>
+                      </li>
+                  <li>
+            <a href="https://shop.kingarthurflour.com/publications/sift-magazine">Sift Magazine</a>
+                      </li>
+                  <li>
+            <a href="https://shop.kingarthurflour.com/publications/cookbooks">Our Cookbooks</a>
+                      </li>
+              </ul>
+      
+
+
+
+  </nav>
+
+  </div>
+
+      </div>
+    
+          <div class="footer__third footer-menu">
+          <div class="region region-footer-third">
+    <nav role="navigation" aria-labelledby="block-kaf-nextgenweb-footerforprofessionalbakers-menu" id="block-kaf-nextgenweb-footerforprofessionalbakers">
+      
+  <h2 id="block-kaf-nextgenweb-footerforprofessionalbakers-menu">For Professional Bakers</h2>
+  
+
+        
+
+                <ul data-region="footer_third" class="menu-footer-professional-bakers menu-level-0">
+                        <li>
+            <a href="/pro" data-drupal-link-system-path="node/27741">Bakery &amp; Food Service Sales</a>
+                      </li>
+                  <li>
+            <a href="/pro/products" data-drupal-link-system-path="node/28691">Commercial Product Lines</a>
+                      </li>
+                  <li>
+            <a href="/pro/distributor" data-drupal-link-system-path="node/41">Wholesale Distributors</a>
+                      </li>
+                  <li>
+            <a href="/baking-school/calendar?cat=8" data-drupal-link-query="{&quot;cat&quot;:&quot;8&quot;}" data-drupal-link-system-path="node/28251">Classes &amp; Training</a>
+                      </li>
+                  <li>
+            <a href="/pro/formulas" data-drupal-link-system-path="node/27691">Bakery Formulas</a>
+                      </li>
+                  <li>
+            <a href="/pro/reference" data-drupal-link-system-path="node/28646">Resources &amp; Reference </a>
+                      </li>
+              </ul>
+      
+
+
+
+  </nav>
+
+  </div>
+
+      </div>
+    
+          <div class="footer__fourth footer-menu">
+          <div class="region region-footer-fourth">
+    <nav role="navigation" aria-labelledby="block-kaf-nextgenweb-footerkingarthurflour-menu" id="block-kaf-nextgenweb-footerkingarthurflour">
+      
+  <h2 id="block-kaf-nextgenweb-footerkingarthurflour-menu">King Arthur Flour</h2>
+  
+
+        
+
+                <ul data-region="footer_fourth" class="menu-footer-king-arthur-flour menu-level-0">
+                        <li>
+            <a href="/about/our-products" data-drupal-link-system-path="node/27611">Our Product Lines</a>
+                      </li>
+                  <li>
+            <a href="/wheretobuy" title="Find our Products at a store near you" data-drupal-link-system-path="wheretobuy">Find Products Near You</a>
+                      </li>
+                  <li>
+            <a href="/about/products/docs/flour-safety" data-drupal-link-system-path="node/29381">Say No to Raw Dough</a>
+                      </li>
+                  <li>
+            <a href="/visit" data-drupal-link-system-path="node/166">Visit Us</a>
+                      </li>
+                  <li>
+            <a href="/jobs" data-drupal-link-system-path="node/28606">Jobs &amp; Careers</a>
+                      </li>
+                  <li>
+            <a href="/press-media">News and Press</a>
+                      </li>
+                  <li>
+            <a href="/contact-us">Contact Us</a>
+                      </li>
+              </ul>
+      
+
+
+
+  </nav>
+
+  </div>
+
+      </div>
+      </div>
+      <div class="footer__legal">
+      
+<div class="region region-footer">
+  <p class="copyright">Copyright &copy;
+    2020
+    King Arthur Flour Company, Inc. All rights reserved.  </p>
+
+      <nav role="navigation" aria-labelledby="block-footerlegal-menu" id="block-footerlegal">
+            
+  <h2 class="visually-hidden" id="block-footerlegal-menu">Footer - Legal</h2>
+  
+
+        
+
+                <ul data-region="footer" class="menu-footer-legal menu-level-0">
+                        <li>
+            <a href="/about/products/docs/supply-chain-disclosure" data-drupal-link-system-path="node/29386">Supply Chain Disclosure</a>
+                      </li>
+                  <li>
+            <a href="/policies/accessibility" title="Accessibility information" data-drupal-link-system-path="node/27771">Accessibility</a>
+                      </li>
+                  <li>
+            <a href="/policies/privacy-policy" data-drupal-link-system-path="node/27761">Privacy Policy</a>
+                      </li>
+                  <li>
+            <a href="/policies/terms-of-use" data-drupal-link-system-path="node/27766">Terms of Use</a>
+                      </li>
+                  <li>
+            <a href="/policies/privacy/california#do-not-sell" data-drupal-link-system-path="node/39046">Do Not Sell My Information</a>
+                      </li>
+              </ul>
+      
+
+
+
+  </nav>
+
+  </div>
+
+    </div>
+  </footer>
+
+</div>
+
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/16301","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","ajaxPageState":{"libraries":"ckeditor_accordion\/accordion_style,core\/html5shiv,core\/picturefill,eu_cookie_compliance\/eu_cookie_compliance_bare,kaf_ga_tracking\/kaf_ga_tracking,kaf_helpscout\/helpscout,kaf_nextgenweb\/global-scripts,kaf_nextgenweb\/global-styling,kaf_nextgenweb\/status-message-ui,kaf_promo_bar\/kaf_promo_bar,kaf_recipe_box\/recipebox,kaf_share\/kaf_share,kaf_shopinfo\/shopinfo,system\/base,webform\/webform.element.details.save,webform\/webform.element.details.toggle,webform\/webform.element.message,webform\/webform.form","theme":"kaf_nextgenweb","theme_token":null},"ajaxTrustedUrl":{"form_action_p_pvdeGsVG5zNF_XLGPTvYSKCf43t8qZYSwcfZl2uzM":true},"kaf_helpscout":{"beacon_id":"fd820c57-521c-4c0a-9eff-0ba927533437"},"kafShopinfo":{"apiBaseUrl":"https:\/\/shop.kingarthurflour.com\/api\/userinfo","loginUrl":"https:\/\/shop.kingarthurflour.com\/AcceptLogin"},"eu_cookie_compliance":{"popup_enabled":true,"popup_agreed_enabled":false,"popup_hide_agreed":false,"popup_clicking_confirmation":true,"popup_scrolling_confirmation":false,"popup_html_info":"\u003Cdiv class =\u0022alert alert--cookie sticky\u0022\u003E\n  \u003Cspan\u003E\n    \u003Cp\u003EThis site uses cookies to provide you with the best experience possible.\u003C\/p\u003E\n\n  \u003C\/span\u003E\n      \u003Ca class=\u0022find-more-button alert__learnmore\u0022\u003ELearn More\u003C\/a\u003E\n    \u003Ca class=\u0022agree-button alert__close\u0022\u003E\u003Ci\u003EClose\u003C\/i\u003E\u003C\/a\u003E\n\u003C\/div\u003E","use_mobile_message":false,"mobile_popup_html_info":"\u003Cdiv class =\u0022alert alert--cookie sticky\u0022\u003E\n  \u003Cspan\u003E\n    \n  \u003C\/span\u003E\n      \u003Ca class=\u0022find-more-button alert__learnmore\u0022\u003ELearn More\u003C\/a\u003E\n    \u003Ca class=\u0022agree-button alert__close\u0022\u003E\u003Ci\u003EClose\u003C\/i\u003E\u003C\/a\u003E\n\u003C\/div\u003E","mobile_breakpoint":768,"popup_html_agreed":false,"popup_use_bare_css":true,"popup_height":"auto","popup_width":"100%","popup_delay":1000,"popup_link":"\/policies\/privacy.html","popup_link_new_window":true,"popup_position":false,"fixed_top_position":true,"popup_language":"en","store_consent":false,"better_support_for_screen_readers":false,"cookie_name":"","reload_page":false,"domain":"","domain_all_sites":null,"popup_eu_only_js":false,"cookie_lifetime":100,"cookie_session":0,"disagree_do_not_show_popup":false,"method":"default","whitelisted_cookies":"","withdraw_markup":"\u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-tab\u0022\u003EPrivacy settings\u003C\/button\u003E\n\u003Cdiv class=\u0022eu-cookie-withdraw-banner\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info eu-cookie-compliance-content\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022 class=\u0022eu-cookie-compliance-message\u0022\u003E\n      \u003Ch2\u003EWe use cookies on this site to enhance your user experience\u003C\/h2\u003E\n\u003Cp\u003EYou have given your consent for us to set cookies.\u003C\/p\u003E\n\n    \u003C\/div\u003E\n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022eu-cookie-compliance-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-button\u0022\u003EWithdraw consent\u003C\/button\u003E\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","withdraw_enabled":false,"withdraw_button_on_info_popup":null,"cookie_categories":[],"enable_save_preferences_button":null,"fix_first_cookie_category":null,"select_all_categories_by_default":null},"ckeditorAccordion":{"accordionStyle":{"collapseAll":1}},"kaf_recipe_box":{"api_base_url":"https:\/\/shop.kingarthurflour.com\/api\/recipebox","shop_signin_url":"https:\/\/shop.kingarthurflour.com\/signin"},"kaf_promo_bar":{"api_base_url":"https:\/\/shop.kingarthurflour.com\/CurrentPromo"},"kaf_search":{"algolia_app_id":"HWPWEWOTF5","algolia_api_key":"f76e4ac912eee478c11cad084afe4ecb"},"user":{"uid":0,"permissionsHash":"c50293c644408a7d52ffd7353eafe0b32da2035809d230aaf4ae7d894d3a6a42"}}</script>
+<script src="/sites/default/files/js/js_feLnzxMJ6LPDxEGH8i1DOVU8d0T-3HzNlX2cVXqd6DY.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default,Array.prototype.find,Array.prototype.includes"></script>
+<script src="/sites/default/files/js/js_D9x4Ep0qRteKT2GR-EHHSFpRqqFHFp2KrnRIQMYj21A.js"></script>
+
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"6b8b93db2d","applicationID":"401100790","transactionName":"YABQZUUAChBXU0xYDVlKc1JDCAsNGXRKRBJWCW5yWBMBP3BfSlw+cQpAXHUUDQ9SVUocXEUAXFVSEzQPV1NdWQ1bAVdDcQ4WDndTTFgNWQ==","queueTime":0,"applicationTime":361,"atts":"TEdTEw0aGR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
