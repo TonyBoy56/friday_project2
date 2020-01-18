@@ -1,4 +1,4 @@
-# _Portfolio Landning Page_
+# _Programming Language Survey_
 
 #### _This is a running webpage, 1/7/20_
 
@@ -6,7 +6,7 @@
 
 ## Description
 
-_This is my first portfolio page. Here you will find information about me, my personal life, and my career ambitions followed by my work history._
+_This project is a survery for a user to determine what kind of programmer they may be most suitable for. It is not fully functional, there are still pieces in JS that need adding to._
 
 ## Setup/Installation Requirements
 
@@ -20,13 +20,13 @@ _{Leave nothing to chance! You want it to be easy for potential users, employers
 
 ## Known Bugs
 
-_None applicable_
+_JS is not in its finished state, more changes comming soon_
 
 ## Support and contact details
 
 _codrocks.cruz3@gmail.com_
 
-_503-679-7032_
+
 
 ## Technologies Used
 
