@@ -22,3 +22,6 @@ $(document).ready(function() {
     });
   });
 });
+
+
+// Messy code, I need as much help as possible to run conditionals within the function to return a string as the result of the users choices //
