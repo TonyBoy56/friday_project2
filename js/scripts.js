@@ -26,3 +26,12 @@
 
 // Messy code, I need as much help as possible to run conditionals within the function to return a string as the result of the users choices //
 
+// New Back-end logic //
+
+// New Front-end logic //
+
+$(document).ready(function () {
+    $("#formOne").submit(function (event) {
+
+    });
+});
