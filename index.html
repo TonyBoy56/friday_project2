@@ -23,108 +23,122 @@
 
     <form id="formOne">
       <!-- First question-->
-      div.form-group
-        <h4>What is your favorite food?</h4>
-        <ol>
-          <li>
-            <label>
-              <input type="radio" name="question1" value="a1">Burgers and fries
-            </label>
-          </li>
+      <div class="form-group">
+        <div id="food">
+          <h4>What is your favorite food?</h4>
+          <ol>
+            <li>
+              <label>
+                <input type="radio" name="question1" value="a1">Burgers and fries
+              </label>
+            </li>
+              <br>
+            <li>  
+              <label>
+                <input type="radio" name="question1" value="a2">Ice Cream
+              </label>
+            </li>
             <br>
-          <li>  
-            <label>
-              <input type="radio" name="question1" value="a2">Ice Cream
-            </label>
-          </li>
-          <br>
-          <li>
-            <label>
-              <input type="radio" name="question1" value="a3">Pizza
-            </label>
-          </li>
-          <br>
-          <li>
-            <label>
-              <input type="radio" name="question1" value="a4">Tacos
-            </label>
-          </li>
-        </ol>
+            <li>
+              <label>
+                <input type="radio" name="question1" value="a3">Pizza
+              </label>
+            </li>
+            <br>
+            <li>
+              <label>
+                <input type="radio" name="question1" value="a4">Tacos
+              </label>
+            </li>
+          </ol>
+        </div>
+      </div>
 
       <!-- Second question -->
-      <h4>What is your favorite acivity?</h4>
-
-      <ul>
-        <li>
-          <label>
-            <input type="radio" name="question2" value="a1">Gaming
-          </label>
-        </li>
-        <br>
-        <li>
-          <label>
-            <input type="radio" name="question2" value="a2">Sports
-          </label>
-        </li>
-        <br>
-        <li>
-          <label>
-            <input type="radio" name="question2" value="a3">Movie Watching
-          </label>
-        </li>
-        <br>
-        <li>
-          <label>
-            <input type="radio" name="question2" value="a4">Reading
-          </label>
-        </li>
-      </ul>
+      <h4>What is your favorite activity?</h4>
+      <div class="form-group">
+        <div id="activity">
+          <ul>
+            <li>
+              <label>
+                <input type="radio" name="question2" value="a1">Gaming
+              </label>
+            </li>
+            <br>
+            <li>
+              <label>
+                <input type="radio" name="question2" value="a2">Sports
+              </label>
+            </li>
+            <br>
+            <li>
+              <label>
+                <input type="radio" name="question2" value="a3">Movie Watching
+              </label>
+            </li>
+            <br>
+            <li>
+              <label>
+                <input type="radio" name="question2" value="a4">Reading
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
 
       <!-- Third question -->
       <h4>Server-side, or User Interface?</h4>
-      <label>
-        <input type="radio" name="question3" value="a1">Python, Java, Ruby
-      </label>
-      <br>
-      <label>
-        <input type="radio" name="question3" value="a2">HTML, CSS, JavaScript
-      </label>
-    
-      <!-- Fourth question -->
-      <h4>What kind of coffee do you most enjoy?</h4>
-      <label>
-        <input type="radio" name="question4" value="a1">American Drip
-      </label>
-      <br>
-      <label>
-        <input type="radio" name="question4" value="a2">French Press
-      </label>
-      <br>
-      <label>
-        <input type="radio" name="question4" value="a3">Lates
-      </label>
-      <br>
-      <label>
-        <input type="radio" name="question4" value="a4">Iced Coffee
-      </label>
+      <div class="form-group">
+        <div id="language">
+          <label>
+            <input type="radio" name="question3" value="a1">Python, Java, Ruby
+          </label>
+          <br>
+          <label>
+            <input type="radio" name="question3" value="a2">HTML, CSS, JavaScript
+          </label>
+        
+          <!-- Fourth question -->
+          <h4>What kind of coffee do you most enjoy?</h4>
+          <label>
+            <input type="radio" name="question4" value="a1">American Drip
+          </label>
+          <br>
+          <label>
+            <input type="radio" name="question4" value="a2">French Press
+          </label>
+          <br>
+          <label>
+            <input type="radio" name="question4" value="a3">Lates
+          </label>
+          <br>
+          <label>
+            <input type="radio" name="question4" value="a4">Iced Coffee
+          </label>
+        </div>
+      </div>
 
       <!-- Fifth question -->
       <h4>What is your favorite color?</h4>
-      <label>
-        <input type="radio" name="question5" value="a3">Red
-      </label>
-      <br>
-      <label>
-        <input type="radio" name="question5" value="a4">Green
-      </label>
-      <br>
-      <label>
-        <input type="radio" name="question5" value="a3">Purple
-      </label>
-      <br>
-      <label>
-        <input type="radio" name="question5" value="a4">Orange
-      </label>
+      <div class="form-group">
+        <div id="color">
+          <label>
+            <input type="radio" name="question5" value="a3">Red
+          </label>
+          <br>
+          <label>
+            <input type="radio" name="question5" value="a4">Green
+          </label>
+          <br>
+          <label>
+            <input type="radio" name="question5" value="a3">Purple
+          </label>
+          <br>
+          <label>
+            <input type="radio" name="question5" value="a4">Orange
+          </label>
+        </div>
+      </div>
     </form>
 
     <button type="submit" id="submit" onclick="output()">Click to Finish!</button>
