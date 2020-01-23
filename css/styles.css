@@ -10,6 +10,7 @@ img {
 #submit {
   font-size: large;
   font-weight: bolder;
+  text-shadow: black;
   color: blueviolet;
   width: 70%;
   padding-top: 15px;
