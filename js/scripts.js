@@ -11,14 +11,14 @@ $(document).ready(function() {
 
     var result5 = $("input[name=question5]").val();
   
-    if (result1 === result2); {
-      $("#output").text("")
+    if (result1 === result2) {
+      $("#output").text("Nice choice!Try some HTML/CSS!");
+    } else if (result2 === result3) {
+      $("#output").text("Hmmm... It seems back-end programming may be suitable for you."); 
+    } else if (result3 === result4) {
+      ("#output").text("Nice! plenty of caffiene is a great choice for some front-end focused development!" );
+    } else if (result4 === result5) {
+      ("#output").text("You know, maybe it's worth considering taking up something else.");
     }
   });
 });
-
-// if (result1 === result2); {
-//   $("output").text("Congrats! You are front-end specialized programmer! Stick with html and css.")
-//   else if (result1 != result2) {
-//     $("output").text("Maybe you should reconsider your field of choice...");
-//   });
